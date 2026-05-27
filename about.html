@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Timberline Fire Systems was founded by Josh, a veteran of the restaurant industry with over 20 years of self-employment experience. Based in Beaverton, Oregon.">
+  <title>About — Timberline Fire Systems | Beaverton, OR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --fir: #1C2B2B;
+      --slate: #263535;
+      --copper: #C0845A;
+      --teal: #3D6B6B;
+      --teal-mid: #5C8F8F;
+      --teal-light: #7AADAD;
+      --white: #F5F2ED;
+      --offwhite: #EAE6DF;
+      --body: #2E3F3F;
+      --muted: #5C7A7A;
+      --dim: rgba(29, 43, 43, 0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--body);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 4rem;
+      background: var(--fir);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 14px; }
+
+    .nav-logo-text .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+
+    .nav-logo-text .sub {
+      font-size: 9px;
+      color: var(--teal-light);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+    }
+
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+
+    .nav-cta {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 0.5px solid var(--copper);
+      color: var(--copper);
+      padding: 9px 22px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .nav-cta:hover { background: var(--copper); color: var(--fir); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--fir);
+      padding: 5rem 4rem 4rem;
+      border-bottom: 3px solid var(--copper);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* FLAG: consider adding a background photo here with dark overlay, similar to homepage hero */
+    /* Suggested photo: job site or Portland cityscape. Reference: images/hero.jpg treatment */
+
+    .page-header-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1.25rem;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--teal-light);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+
+    /* ── SHARED ── */
+    hr { border: none; border-top: 0.5px solid var(--dim); margin: 0 4rem; }
+
+    .eyebrow-sm {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 1rem;
+    }
+
+    /* ── FOUNDER SECTION ── */
+    .founder-section {
+      padding: 7rem 4rem;
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .founder-img-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 560px;
+    }
+
+    /* FLAG: replace placeholder with real headshot or candid job site photo of Josh.
+       A real founder photo here is the single highest-trust element on this page.
+       Suggested: professional photo on a job site, or portrait in uniform.
+       Reference image path: images/josh.jpg */
+    .founder-img-placeholder {
+      width: 100%;
+      height: 100%;
+      background: var(--slate);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      border: 0.5px solid rgba(92,143,143,0.2);
+    }
+
+    .founder-img-placeholder svg { color: rgba(92,143,143,0.3); }
+
+    .founder-img-placeholder p {
+      font-size: 12px;
+      color: rgba(92,143,143,0.4);
+      letter-spacing: 0.06em;
+      text-align: center;
+      max-width: 200px;
+      line-height: 1.6;
+    }
+
+    .founder-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .founder-copper-rule {
+      width: 36px;
+      height: 2px;
+      background: var(--copper);
+      margin-bottom: 1rem;
+    }
+
+    .founder-content h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .founder-content p {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--body);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    /* FLAG: pull quote candidate. Consider breaking this line out as a large
+       copper pull quote once a polish pass is done on this page:
+       "I built the inspection company I'd want to call if I were still running a kitchen." */
+    .pull-quote {
+      border-left: 3px solid var(--copper);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      background: var(--offwhite);
+    }
+
+    .pull-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.4;
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* ── HOW WE WORK ── */
+    .how-section {
+      padding: 7rem 4rem;
+      background: var(--offwhite);
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .how-left {
+      position: sticky;
+      top: 6rem;
+    }
+
+    .how-left h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(24px, 2.5vw, 32px);
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.2;
+      margin-bottom: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .how-right p {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--body);
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+
+    .how-right p:last-child { margin-bottom: 0; }
+
+    .how-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--dim);
+      margin-top: 2.5rem;
+    }
+
+    .how-pillar {
+      background: var(--offwhite);
+      padding: 1.75rem;
+    }
+
+    .how-pillar-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--copper);
+      margin-bottom: 1rem;
+    }
+
+    .how-pillar h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--fir);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .how-pillar p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* ── CREDENTIALS ── */
+    .creds-section {
+      padding: 7rem 4rem;
+      background: var(--fir);
+    }
+
+    .creds-section .eyebrow-sm { color: var(--teal-light); }
+
+    .creds-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 3rem;
+      letter-spacing: -0.01em;
+      max-width: 560px;
+    }
+
+    .creds-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: rgba(92,143,143,0.15);
+    }
+
+    .cred-card {
+      background: var(--fir);
+      padding: 2rem 2.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: background 0.15s;
+    }
+
+    .cred-card:hover { background: var(--slate); }
+
+    .cred-icon {
+      width: 40px;
+      height: 40px;
+      border: 0.5px solid rgba(192,132,90,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--copper);
+      margin-top: 2px;
+    }
+
+    .cred-card-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 4px;
+    }
+
+    .cred-card-val {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.4;
+    }
+
+    /* FLAG: add Amerex KP cert card once obtained */
+    /* FLAG: update FED Learning Center card once certification is complete */
+    /* FLAG: confirm "fully insured" before going live */
+
+    /* ── AREA SECTION ── */
+    .area-section {
+      padding: 7rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    /* FLAG: consider a Portland aerial or cityscape photo on the right side of this section.
+       A moody, dark-toned Portland photo would add visual weight here.
+       Suggested path: images/portland.jpg */
+
+    .area-section h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(24px, 2.5vw, 32px);
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .area-section p {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--body);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    .area-section p:last-child { margin-bottom: 0; }
+
+    .area-map-placeholder {
+      background: var(--offwhite);
+      border: 0.5px solid var(--dim);
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    /* FLAG: replace map placeholder with either:
+       1. A Portland aerial photo (recommended, images/portland.jpg)
+       2. An embedded Google Maps iframe showing your service area
+       3. A custom SVG map of the tri-county area */
+    .area-map-placeholder svg { color: rgba(29,43,43,0.15); }
+
+    .area-map-placeholder p {
+      font-size: 12px;
+      color: rgba(29,43,43,0.3);
+      letter-spacing: 0.06em;
+      margin-bottom: 0;
+    }
+
+    .county-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 2rem;
+    }
+
+    .county-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0.9rem 0;
+      border-bottom: 0.5px solid var(--dim);
+    }
+
+    .county-item:first-child { border-top: 0.5px solid var(--dim); }
+
+    .county-dot { width: 5px; height: 5px; background: var(--copper); flex-shrink: 0; }
+
+    .county-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--fir);
+    }
+
+    .county-cities {
+      font-size: 13px;
+      color: var(--muted);
+      margin-left: auto;
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--fir);
+      padding: 5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .cta-left h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .cta-left p {
+      font-size: 15px;
+      color: var(--teal-light);
+      line-height: 1.75;
+    }
+
+    .cta-right {
+      border-left: 0.5px solid rgba(92,143,143,0.25);
+      padding-left: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .cta-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cta-icon {
+      width: 44px;
+      height: 44px;
+      border: 0.5px solid rgba(192,132,90,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--copper);
+    }
+
+    .clabel {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 3px;
+    }
+
+    .cval {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--copper);
+      color: var(--fir);
+      padding: 14px 28px;
+      margin-top: 0.25rem;
+      align-self: flex-start;
+      transition: background 0.15s;
+    }
+
+    .cta-btn:hover { background: #d4956a; }
+
+    /* ── CITIES (SEO) ── */
+    .cities {
+      padding: 2.5rem 4rem;
+      border-top: 0.5px solid var(--dim);
+      background: var(--white);
+    }
+
+    .cities p {
+      font-size: 12px;
+      color: rgba(60, 90, 90, 0.38);
+      line-height: 1.8;
+      max-width: 820px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem 4rem;
+      background: var(--fir);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-copy { font-size: 12px; color: var(--teal-light); }
+    .footer-links { display: flex; gap: 2rem; font-size: 12px; color: var(--teal-light); }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .nav-links { display: none; }
+      .page-header { padding: 3rem 1.5rem; }
+      .founder-section, .how-section, .creds-section, .area-section { padding: 4rem 1.5rem; }
+      .founder-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .founder-img-wrap { height: 360px; }
+      .how-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .how-left { position: static; }
+      .how-pillars { grid-template-columns: 1fr; }
+      .creds-grid { grid-template-columns: 1fr; }
+      .area-section { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cta-section { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+      .cta-right { border-left: none; padding-left: 0; border-top: 0.5px solid rgba(92,143,143,0.25); padding-top: 2.5rem; }
+      hr { margin: 0 1.5rem; }
+      .cities { padding: 2rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <svg width="34" height="27" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+        <polygon points="20,2 38,30 2,30" fill="none" stroke="#C0845A" stroke-width="1.5"/>
+        <polygon points="20,12 30,30 10,30" fill="#C0845A" opacity="0.2"/>
+        <line x1="2" y1="30" x2="38" y2="30" stroke="#5C8F8F" stroke-width="1.5"/>
+      </svg>
+      <div class="nav-logo-text">
+        <div class="name">TIMBERLINE</div>
+        <div class="sub">Fire Systems</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Schedule Inspection</a>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <!-- FLAG: add background photo with dark overlay here for visual impact -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="eyebrow">Our story</div>
+      <h1>Built by someone who's worked in the kitchens we inspect.</h1>
+      <p>Nearly a decade in commercial kitchens. Over twenty years running a business. We understand what it costs when operations stop.</p>
+    </div>
+  </div>
+
+  <!-- FOUNDER SECTION -->
+  <section class="founder-section">
+    <div class="founder-grid">
+
+      <!-- FLAG: replace placeholder with real photo of Josh.
+           A candid job site photo or professional portrait works best.
+           Save as images/josh.jpg and swap the placeholder div for:
+           <img src="images/josh.jpg" alt="Josh, founder of Timberline Fire Systems"> -->
+      <div class="founder-img-wrap">
+        <div class="founder-img-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <p>Photo of Josh coming soon</p>
+        </div>
+      </div>
+
+      <div class="founder-content">
+        <div class="founder-copper-rule"></div>
+        <div class="eyebrow-sm">The founder</div>
+        <h2>Meet Josh, founder of Timberline Fire Systems.</h2>
+        <p>I spent nearly a decade working in commercial kitchens before making the move to fire suppression. Combined with over twenty years of running my own businesses, that experience shapes everything about how Timberline operates.</p>
+        <p>I've worked Friday night services. I know what it looks like when something goes wrong mid-shift, and I know exactly what an unplanned hour of downtime costs an operator. That perspective doesn't come from a fire protection textbook.</p>
+
+        <div class="pull-quote">
+          <p>"I built the inspection company I'd want to call if I were still running a kitchen."</p>
+        </div>
+
+        <p>When I made the move into fire suppression, I wasn't just learning a trade. I was building the kind of service I always wished existed on the other side of the hood.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- HOW WE WORK -->
+  <section class="how-section">
+    <div class="how-grid">
+      <div class="how-left">
+        <div class="eyebrow-sm">How we work</div>
+        <h2>Built around your schedule, not ours.</h2>
+      </div>
+      <div class="how-right">
+        <p>Timberline inspections are designed to minimize disruption. We show up on time, work efficiently, and get out of your way. You get a clear, readable report the same day.</p>
+        <p>We also believe the best client relationships are built on consistency. When you call Timberline, you get the same technician every visit. Someone who knows your system, knows your kitchen, and can spot changes before they become problems.</p>
+        <p>That's not just good service. That's how you protect an investment.</p>
+        <div class="how-pillars">
+          <div class="how-pillar">
+            <div class="how-pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Minimal downtime</h3>
+            <p>Most inspections completed in under an hour. We work around your prep schedule.</p>
+          </div>
+          <div class="how-pillar">
+            <div class="how-pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+            </div>
+            <h3>Clear documentation</h3>
+            <p>Signed reports delivered same day. Written to be understood, not just filed.</p>
+          </div>
+          <div class="how-pillar">
+            <div class="how-pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Consistent relationships</h3>
+            <p>Same technician every visit. We learn your system and your kitchen over time.</p>
+          </div>
+          <div class="how-pillar">
+            <div class="how-pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3>Code compliant</h3>
+            <p>Every inspection follows NFPA 96. Your report holds up with insurers and fire marshals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="creds-section">
+    <div class="eyebrow-sm">Certifications</div>
+    <h2>Qualified to do the work. Committed to doing it right.</h2>
+    <div class="creds-grid">
+      <div class="cred-card">
+        <div class="cred-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="1"/></svg>
+        </div>
+        <div>
+          <div class="cred-card-label">Certification</div>
+          <div class="cred-card-val">Portland Certificate of Fitness, Fixed Fire Extinguishing Systems</div>
+        </div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M9 22l3-3 3 3"/><path d="M12 19v-3"/></svg>
+        </div>
+        <div>
+          <!-- FLAG: update label from "in progress" once FED cert is complete -->
+          <div class="cred-card-label">In progress</div>
+          <div class="cred-card-val">FED Learning Center Certification</div>
+        </div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+        </div>
+        <div>
+          <div class="cred-card-label">Standard</div>
+          <div class="cred-card-val">NFPA 96 compliant inspection process</div>
+        </div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <div>
+          <!-- FLAG: confirm fully insured before going live -->
+          <div class="cred-card-label">Business</div>
+          <div class="cred-card-val">Oregon LLC, fully insured</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="area-section">
+    <div>
+      <div class="eyebrow-sm">Where we work</div>
+      <h2>Beaverton based. Portland metro focused.</h2>
+      <p>Timberline is based in Beaverton and serves the full Portland metro including Washington, Multnomah, and Clackamas counties. Restaurants, ghost kitchens, food trucks, and commercial kitchens of all sizes.</p>
+      <p>Portland's food truck community is a particular focus. With over 500 food trucks operating in the metro, it's one of the most underserved markets for suppression inspection in the region.</p>
+      <div class="county-list">
+        <div class="county-item"><div class="county-dot"></div><div class="county-name">Multnomah County</div><div class="county-cities">Portland, Gresham, Troutdale</div></div>
+        <div class="county-item"><div class="county-dot"></div><div class="county-name">Washington County</div><div class="county-cities">Beaverton, Hillsboro, Tigard</div></div>
+        <div class="county-item"><div class="county-dot"></div><div class="county-name">Clackamas County</div><div class="county-cities">Oregon City, Happy Valley, Canby</div></div>
+      </div>
+    </div>
+
+    <!-- FLAG: replace map placeholder with Portland aerial photo or Google Maps embed.
+         Recommended: moody Portland cityscape image saved as images/portland.jpg
+         OR embed a Google Maps iframe showing the tri-county service area -->
+    <div class="area-map-placeholder">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
+        <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+        <circle cx="12" cy="9" r="2.5"/>
+      </svg>
+      <p>Map or photo coming soon</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-left">
+      <h2>Ready to get your kitchen compliant?</h2>
+      <p>Semi-annual inspections are required by Oregon law. Call or email to get on the schedule.</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <!-- FLAG: replace with real phone number before going live -->
+          <div class="clabel">Phone</div>
+          <div class="cval">(503) 555-0100</div>
+        </div>
+      </div>
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <!-- FLAG: replace with real email before going live -->
+          <div class="clabel">Email</div>
+          <div class="cval">hello@timberlinefiresystems.com</div>
+        </div>
+      </div>
+      <a href="contact.html" class="cta-btn">Schedule an inspection</a>
+    </div>
+  </section>
+
+  <!-- CITIES (SEO) -->
+  <div class="cities">
+    <p>Timberline Fire Systems provides kitchen hood suppression inspections throughout the Portland metro area including Portland, Beaverton, Hillsboro, Gresham, Lake Oswego, Tigard, Tualatin, Sherwood, Wilsonville, Oregon City, Happy Valley, Canby, Clackamas, Milwaukie, West Linn, Troutdale, Fairview, Wood Village, Cornelius, Forest Grove, and surrounding communities in Multnomah, Washington, and Clackamas counties.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-name">TIMBERLINE FIRE SYSTEMS</div>
+    <div class="footer-copy">© 2026 Timberline Fire Systems LLC. Beaverton, Oregon.</div>
+    <div class="footer-links">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

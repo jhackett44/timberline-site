@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Timberline Fire Systems provides certified kitchen hood fire suppression inspections for restaurants and food trucks across the Portland metro area. NFPA 96 compliant.">
+  <title>Timberline Fire Systems — Kitchen Hood Suppression Inspections | Portland, OR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --fir: #1C2B2B;
+      --slate: #263535;
+      --copper: #C0845A;
+      --teal: #3D6B6B;
+      --teal-mid: #5C8F8F;
+      --teal-light: #7AADAD;
+      --white: #F5F2ED;
+      --offwhite: #EAE6DF;
+      --body: #2E3F3F;
+      --muted: #5C7A7A;
+      --dim: rgba(29, 43, 43, 0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--body);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 4rem;
+      background: var(--fir);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 14px; }
+
+    .nav-logo-text .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+
+    .nav-logo-text .sub {
+      font-size: 9px;
+      color: var(--teal-light);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 0.5px solid var(--copper);
+      color: var(--copper);
+      padding: 9px 22px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .nav-cta:hover { background: var(--copper); color: var(--fir); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 560px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      /* FLAG: swap hero.jpg for your actual kitchen photo filename if different */
+      background-image: url('images/hero.jpg');
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(28, 43, 43, 0.94) 0%,
+        rgba(28, 43, 43, 0.80) 45%,
+        rgba(28, 43, 43, 0.32) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 5rem 4rem;
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(40px, 5.5vw, 66px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 em { color: var(--copper); font-style: normal; }
+
+    .hero-sub {
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(245, 242, 237, 0.82);
+      max-width: 440px;
+      line-height: 1.75;
+      margin-bottom: 2.25rem;
+    }
+
+    .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .btn-primary {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--copper);
+      color: var(--fir);
+      padding: 14px 28px;
+      display: inline-block;
+      transition: background 0.15s;
+    }
+
+    .btn-primary:hover { background: #d4956a; }
+
+    .btn-ghost {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 0.5px solid rgba(245, 242, 237, 0.45);
+      color: var(--white);
+      padding: 14px 28px;
+      display: inline-block;
+      transition: border-color 0.15s;
+    }
+
+    .btn-ghost:hover { border-color: var(--white); }
+
+    /* ── CREDENTIAL BAR ── */
+    .credbar {
+      background: var(--offwhite);
+      border-top: 4px solid var(--copper);
+      border-bottom: 0.5px solid var(--dim);
+      padding: 2rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .credbar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 0 2rem;
+      border-right: 0.5px solid var(--dim);
+    }
+
+    .credbar-item:first-child { padding-left: 0; }
+    .credbar-item:last-child { border-right: none; }
+
+    .credbar-icon {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .credbar .slabel {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 4px;
+    }
+
+    .credbar .sval {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.4;
+    }
+
+    /* ── SHARED SECTION STYLES ── */
+    .section { padding: 6rem 4rem; }
+
+    hr { border: none; border-top: 0.5px solid var(--dim); margin: 0 4rem; }
+
+    .eyebrow-sm {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .lead {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+    }
+
+    /* ── SERVICES ── */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--dim);
+    }
+
+    .service-card {
+      background: var(--white);
+      overflow: hidden;
+      transition: background 0.15s;
+    }
+
+    .service-card:hover .card-img { transform: scale(1.03); }
+
+    .card-img-wrap {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .card-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(28,43,43,0.45) 100%);
+    }
+
+    .card-body {
+      padding: 1.75rem 2rem 2.25rem;
+    }
+
+    .svc-num {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--copper);
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--fir);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ── WHY TIMBERLINE ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .why-copper-rule {
+      width: 36px;
+      height: 2px;
+      background: var(--copper);
+      margin-bottom: 1rem;
+    }
+
+    .why-grid h2 {
+      font-size: clamp(28px, 3.5vw, 44px);
+      margin-bottom: 1.5rem;
+    }
+
+    .why-lead {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .why-body p {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    .creds { margin-top: 2rem; }
+
+    .cred {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0.9rem 0;
+      border-bottom: 0.5px solid var(--dim);
+    }
+
+    .cred:first-child { border-top: 0.5px solid var(--dim); }
+
+    .cred-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--copper);
+    }
+
+    .cred span {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--fir);
+    }
+
+    .why-img-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 520px;
+    }
+
+    .why-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .why-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 0.5px solid var(--dim);
+    }
+
+    @media (max-width: 768px) {
+      .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .why-img-wrap { height: 320px; }
+    }
+
+    /* ── SERVICE AREA BAND ── */
+    .area-band {
+      background: var(--fir);
+      padding: 5rem 4rem;
+    }
+
+    .area-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+      align-items: center;
+    }
+
+    .area-band .eyebrow-sm { color: var(--teal-light); }
+    .area-band h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .area-body p {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--teal-light);
+      line-height: 1.85;
+    }
+
+    .area-rule {
+      height: 0.5px;
+      background: rgba(92,143,143,0.2);
+      margin-bottom: 2.5rem;
+    }
+
+    .area-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .area-stat {
+      padding: 1.5rem 2rem;
+      border-right: 0.5px solid rgba(92,143,143,0.15);
+    }
+
+    .area-stat:first-child { padding-left: 0; }
+    .area-stat:last-child { border-right: none; }
+
+    .area-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--copper);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .area-stat-label {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--teal-light);
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 768px) {
+      .area-top { grid-template-columns: 1fr; gap: 1.5rem; }
+      .area-stats { grid-template-columns: 1fr; gap: 0; }
+      .area-stat { padding: 1.25rem 0; border-right: none; border-bottom: 0.5px solid rgba(92,143,143,0.15); }
+      .area-stat:last-child { border-bottom: none; }
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--fir);
+      padding: 5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .cta-left h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .cta-left p {
+      font-size: 15px;
+      color: var(--teal-light);
+      line-height: 1.75;
+    }
+
+    .cta-right {
+      border-left: 0.5px solid rgba(92,143,143,0.25);
+      padding-left: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .cta-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cta-icon {
+      width: 44px;
+      height: 44px;
+      border: 0.5px solid rgba(192,132,90,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--copper);
+      font-size: 18px;
+    }
+
+    .clabel {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 3px;
+    }
+
+    /* FLAG: replace placeholder phone and email before going live */
+    .cval {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--copper);
+      color: var(--fir);
+      padding: 14px 28px;
+      margin-top: 0.25rem;
+      align-self: flex-start;
+      transition: background 0.15s;
+    }
+
+    .cta-btn:hover { background: #d4956a; }
+
+    @media (max-width: 768px) {
+      .cta-section {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 4rem 1.5rem;
+      }
+      .cta-right {
+        border-left: none;
+        padding-left: 0;
+        border-top: 0.5px solid rgba(92,143,143,0.25);
+        padding-top: 2.5rem;
+      }
+    }
+
+    /* ── CITIES (SEO) ── */
+    .cities {
+      padding: 2.5rem 4rem;
+      border-top: 0.5px solid var(--dim);
+      background: var(--white);
+    }
+
+    .cities p {
+      font-size: 12px;
+      color: rgba(60, 90, 90, 0.38);
+      line-height: 1.8;
+      max-width: 820px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem 4rem;
+      background: var(--fir);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-copy { font-size: 12px; color: var(--teal-light); }
+
+    .footer-links { display: flex; gap: 2rem; font-size: 12px; color: var(--teal-light); }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero-content { padding: 3rem 1.5rem; }
+      .credbar { padding: 1.5rem; gap: 1.5rem; }
+      .section { padding: 4rem 1.5rem; }
+      hr { margin: 0 1.5rem; }
+      .service-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .area-band { padding: 4rem 1.5rem; }
+      .area-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .cta-section { padding: 5rem 1.5rem; }
+      .cities { padding: 2rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <svg width="34" height="27" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+        <polygon points="20,2 38,30 2,30" fill="none" stroke="#C0845A" stroke-width="1.5"/>
+        <polygon points="20,12 30,30 10,30" fill="#C0845A" opacity="0.2"/>
+        <line x1="2" y1="30" x2="38" y2="30" stroke="#5C8F8F" stroke-width="1.5"/>
+      </svg>
+      <div class="nav-logo-text">
+        <div class="name">TIMBERLINE</div>
+        <div class="sub">Fire Systems</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Schedule Inspection</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Portland metro kitchen hood suppression</div>
+      <!-- FLAG: revisit tagline before going live -->
+      <h1>Your suppression system is only as good as the <em>technician behind it.</em></h1>
+      <p class="hero-sub">Certified inspections for restaurants and food trucks across the Portland metro. Compliant reports. No runaround.</p>
+      <div class="btn-row">
+        <a href="contact.html" class="btn-primary">Schedule an inspection</a>
+        <a href="services.html" class="btn-ghost">What we cover</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL BAR -->
+  <div class="credbar">
+    <div class="credbar-item">
+      <div class="credbar-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0845A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 12l2 2 4-4"/>
+          <rect x="3" y="3" width="18" height="18" rx="1"/>
+        </svg>
+      </div>
+      <div>
+        <div class="slabel">Certification</div>
+        <div class="sval">Portland Certificate of Fitness</div>
+      </div>
+    </div>
+    <div class="credbar-item">
+      <div class="credbar-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0845A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 8v4l3 3"/>
+        </svg>
+      </div>
+      <div>
+        <div class="slabel">Standard</div>
+        <div class="sval">NFPA 96 compliant inspections</div>
+      </div>
+    </div>
+    <div class="credbar-item">
+      <div class="credbar-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0845A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="slabel">Service area</div>
+        <div class="sval">Greater Portland metro</div>
+      </div>
+    </div>
+    <div class="credbar-item">
+      <div class="credbar-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0845A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="slabel">Experience</div>
+        <div class="sval">Nearly a decade in the industry</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <div class="eyebrow-sm">What we do</div>
+    <h2>Hood suppression inspection and service.</h2>
+    <p class="lead">Oregon law requires semi-annual inspections of all fixed kitchen fire suppression systems. We keep your kitchen compliant, your staff safe, and your paperwork in order.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="card-img-wrap">
+          <img class="card-img" src="images/card-inspection.jpg" alt="Commercial kitchen hood suppression system">
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="svc-num">01</div>
+          <h3>Semi-annual inspection</h3>
+          <p>Full system check per NFPA 96. Nozzles, fusible links, actuation components, and agent levels. You get a signed report ready to file.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="card-img-wrap">
+          <img class="card-img" src="images/card-service.jpg" alt="Kitchen suppression system service">
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="svc-num">02</div>
+          <h3>System service</h3>
+          <p>Fusible link replacement, nozzle cleaning, agent recharge, and pull station testing. We handle what needs handling.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="card-img-wrap">
+          <img class="card-img" src="images/card-foodtruck.jpg" alt="Food truck inspections Portland">
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="svc-num">03</div>
+          <h3>Food truck inspections</h3>
+          <p>Food trucks have specific requirements under NFPA 96. We work directly with Portland's food truck community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- WHY TIMBERLINE -->
+  <section class="section">
+    <div class="why-grid">
+      <div>
+        <div class="why-copper-rule"></div>
+        <div class="eyebrow-sm">Why Timberline</div>
+        <h2>A technician who actually knows kitchens.</h2>
+        <div class="why-body">
+          <p class="why-lead">Most suppression technicians come from a fire protection background. Ours didn't.</p>
+          <p>Nearly a decade in the restaurant industry before crossing over to the technical side. That means faster inspections, fewer disruptions to your prep schedule, and a report you can actually read.</p>
+          <div class="creds">
+            <div class="cred">
+              <div class="cred-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="1"/></svg>
+              </div>
+              <span>Portland Certificate of Fitness, Fixed Fire Extinguishing Systems</span>
+            </div>
+            <div class="cred">
+              <div class="cred-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M9 22l3-3 3 3"/><path d="M12 19v-3"/></svg>
+              </div>
+              <span>FED Learning Center certification (in progress)</span>
+            </div>
+            <div class="cred">
+              <div class="cred-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+              </div>
+              <span>NFPA 96 compliant inspections</span>
+            </div>
+            <div class="cred">
+              <div class="cred-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+              </div>
+              <span>Nearly a decade of restaurant industry experience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-img-wrap">
+        <img src="images/technician.png" alt="Timberline Fire Systems technician inspecting kitchen hood suppression system">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA BAND -->
+  <section class="area-band">
+    <div class="area-top">
+      <div>
+        <div class="eyebrow-sm">Service area</div>
+        <h2>Based in Beaverton. Serving the whole metro.</h2>
+      </div>
+      <div class="area-body">
+        <p>We serve restaurants, ghost kitchens, food trucks, and commercial kitchens throughout the greater Portland metro area. If you're in the valley and your suppression system is due, we can get you on the schedule.</p>
+      </div>
+    </div>
+    <div class="area-rule"></div>
+    <div class="area-stats">
+      <div class="area-stat">
+        <div class="area-stat-num">3</div>
+        <div class="area-stat-label">Counties served</div>
+      </div>
+      <div class="area-stat">
+        <div class="area-stat-num">20+</div>
+        <div class="area-stat-label">Cities in the metro</div>
+      </div>
+      <div class="area-stat">
+        <div class="area-stat-num">500+</div>
+        <div class="area-stat-label">Food trucks in Portland</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-left">
+      <h2>Ready to get your kitchen compliant?</h2>
+      <!-- FLAG: update pricing copy after field experience and market research -->
+      <p>Semi-annual inspections are required by Oregon law. Call or email to get on the schedule.</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <!-- FLAG: replace with real phone number before going live -->
+          <div class="clabel">Phone</div>
+          <div class="cval">(503) 555-0100</div>
+        </div>
+      </div>
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <!-- FLAG: replace with real email before going live -->
+          <div class="clabel">Email</div>
+          <div class="cval">hello@timberlinefiresystems.com</div>
+        </div>
+      </div>
+      <a href="contact.html" class="cta-btn">Schedule an inspection</a>
+    </div>
+  </section>
+
+  <!-- CITIES (SEO) -->
+  <div class="cities">
+    <p>Timberline Fire Systems provides kitchen hood suppression inspections throughout the Portland metro area including Portland, Beaverton, Hillsboro, Gresham, Lake Oswego, Tigard, Tualatin, Sherwood, Wilsonville, Oregon City, Happy Valley, Canby, Clackamas, Milwaukie, West Linn, Troutdale, Fairview, Wood Village, Cornelius, Forest Grove, and surrounding communities in Multnomah, Washington, and Clackamas counties.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-name">TIMBERLINE FIRE SYSTEMS</div>
+    <div class="footer-copy">© 2026 Timberline Fire Systems LLC. Beaverton, Oregon.</div>
+    <div class="footer-links">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
