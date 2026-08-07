@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kitchen hood fire suppression resources for restaurant and food truck operators in Oregon. Inspection requirements, NFPA standards, and fire safety guides from Timberline Fire Systems.">
+  <title>Learning Center — Timberline Fire Systems | Portland, OR</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --fir: #1C2B2B;
+      --slate: #263535;
+      --copper: #C0845A;
+      --teal: #3D6B6B;
+      --teal-mid: #5C8F8F;
+      --teal-light: #7AADAD;
+      --white: #F5F2ED;
+      --offwhite: #EAE6DF;
+      --body: #2E3F3F;
+      --muted: #5C7A7A;
+      --dim: rgba(29, 43, 43, 0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--body); font-family: 'DM Sans', sans-serif; font-weight: 400; line-height: 1.8; font-size: 16px; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: var(--fir); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { display: flex; align-items: center; gap: 14px; }
+    .nav-logo-text .name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; line-height: 1; }
+    .nav-logo-text .sub { font-size: 9px; color: var(--teal-light); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; gap: 2.5rem; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-light); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-cta { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid var(--copper); color: var(--copper); padding: 9px 22px; transition: background 0.15s, color 0.15s; }
+    .nav-cta:hover { background: var(--copper); color: var(--fir); }
+
+    /* ── PAGE HEADER ── */
+    .page-header { background: var(--fir); padding: 5rem 4rem 4rem; border-bottom: 3px solid var(--copper); }
+    .eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--copper); margin-bottom: 1.25rem; }
+    .page-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 600; color: var(--white); line-height: 1.05; margin-bottom: 1.25rem; letter-spacing: -0.01em; max-width: 640px; }
+    .page-header p { font-size: 17px; font-weight: 400; color: var(--teal-light); max-width: 520px; line-height: 1.75; }
+
+    /* ── ARTICLE GRID ── */
+    .articles-section { padding: 6rem 4rem; }
+
+    .section-intro { margin-bottom: 3.5rem; }
+    .eyebrow-sm { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 1rem; }
+    .section-intro h2 { font-family: 'DM Sans', sans-serif; font-size: clamp(22px, 2.5vw, 30px); font-weight: 500; color: var(--fir); line-height: 1.2; letter-spacing: -0.01em; }
+
+    .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--dim); }
+
+    .article-card { background: var(--white); padding: 2.25rem 2rem; display: flex; flex-direction: column; transition: background 0.15s; }
+    .article-card:hover { background: var(--offwhite); }
+
+    .article-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem; }
+    .article-card h3 { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 500; color: var(--fir); line-height: 1.35; margin-bottom: 0.75rem; }
+    .article-card p { font-size: 14px; color: var(--muted); line-height: 1.75; flex: 1; margin-bottom: 1.5rem; }
+    .article-meta { font-size: 12px; color: var(--teal-mid); margin-bottom: 1.25rem; }
+    .article-link { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--copper); display: flex; align-items: center; gap: 6px; margin-top: auto; }
+    .article-link svg { transition: transform 0.15s; }
+    .article-card:hover .article-link svg { transform: translateX(4px); }
+
+    /* Featured article */
+    .article-card.featured { grid-column: span 3; display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; background: var(--fir); }
+    .article-card.featured:hover { background: var(--fir); }
+    .featured-img { background: var(--slate); min-height: 300px; display: flex; align-items: center; justify-content: center; }
+    /* FLAG: add a photo here once you have a good hood inspection image. images/card-inspection.jpg works as placeholder */
+    .featured-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .featured-body { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+    .featured-body .article-tag { color: var(--copper); }
+    .featured-body h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 2.5vw, 32px); font-weight: 600; color: var(--white); line-height: 1.15; margin-bottom: 0.75rem; }
+    .featured-body p { font-size: 15px; color: var(--teal-light); line-height: 1.75; margin-bottom: 1.5rem; }
+    .featured-body .article-meta { color: var(--teal-mid); }
+    .featured-body .article-link { color: var(--copper); }
+
+    /* Coming soon cards */
+    .article-card.coming-soon { opacity: 0.5; pointer-events: none; }
+    .coming-soon-badge { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-mid); border: 0.5px solid var(--dim); padding: 3px 10px; display: inline-block; margin-bottom: 1rem; }
+
+    /* ── CTA BAND ── */
+    .cta-band { background: var(--offwhite); border-top: 0.5px solid var(--dim); border-bottom: 0.5px solid var(--dim); padding: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .cta-band h2 { font-family: 'DM Sans', sans-serif; font-size: clamp(22px, 2.5vw, 30px); font-weight: 500; color: var(--fir); line-height: 1.2; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .cta-band p { font-size: 15px; color: var(--muted); line-height: 1.75; }
+    .btn-primary { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: var(--fir); color: var(--white); padding: 14px 28px; display: inline-block; transition: background 0.15s; }
+    .btn-primary:hover { background: var(--slate); }
+
+    /* ── CITIES ── */
+    .cities { padding: 2.5rem 4rem; border-top: 0.5px solid var(--dim); }
+    .cities p { font-size: 12px; color: rgba(60,90,90,0.38); line-height: 1.8; max-width: 820px; }
+
+    /* ── FOOTER ── */
+    footer { padding: 2rem 4rem; background: var(--fir); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; }
+    .footer-copy { font-size: 12px; color: var(--teal-light); }
+    .footer-links { display: flex; gap: 2rem; font-size: 12px; color: var(--teal-light); }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .nav-links { display: none; }
+      .page-header { padding: 3rem 1.5rem; }
+      .articles-section { padding: 4rem 1.5rem; }
+      .article-grid { grid-template-columns: 1fr; }
+      .article-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+      .featured-img { min-height: 200px; }
+      .cta-band { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
+      .cities { padding: 2rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <svg width="34" height="27" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+        <polygon points="20,2 38,30 2,30" fill="none" stroke="#C0845A" stroke-width="1.5"/>
+        <polygon points="20,12 30,30 10,30" fill="#C0845A" opacity="0.2"/>
+        <line x1="2" y1="30" x2="38" y2="30" stroke="#5C8F8F" stroke-width="1.5"/>
+      </svg>
+      <div class="nav-logo-text">
+        <div class="name">TIMBERLINE</div>
+        <div class="sub">Fire Systems</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="learning-center.html" class="active">Learning Center</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Schedule Inspection</a>
+  </nav>
+
+  <div class="page-header">
+    <div class="eyebrow">Learning Center</div>
+    <h1>What every restaurant operator should know about kitchen fire suppression.</h1>
+    <p>Practical guides on inspection requirements, NFPA standards, and keeping your kitchen compliant and your staff safe.</p>
+  </div>
+
+  <section class="articles-section">
+    <div class="section-intro">
+      <div class="eyebrow-sm">All articles</div>
+      <h2>Guides and resources from Timberline Fire Systems.</h2>
+    </div>
+
+    <div class="article-grid">
+
+      <!-- Featured article -->
+      <a href="articles/how-often-hood-inspection-oregon.html" class="article-card featured">
+        <div class="featured-img">
+          <img src="images/card-inspection.jpg" alt="Commercial kitchen hood suppression system">
+        </div>
+        <div class="featured-body">
+          <div class="article-tag">Inspection requirements</div>
+          <h3>How Often Does a Restaurant Hood Suppression System Need to Be Inspected in Oregon?</h3>
+          <p>Oregon law requires semi-annual inspections of all fixed kitchen fire suppression systems. Here's what the law requires, what the inspection covers, and what happens if you skip it.</p>
+          <div class="article-meta">4 min read</div>
+          <div class="article-link">Read article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- Coming soon cards -->
+      <div class="article-card coming-soon">
+        <div class="coming-soon-badge">Coming soon</div>
+        <div class="article-tag">Code compliance</div>
+        <h3>What Happens If Your Suppression System Fails Inspection?</h3>
+        <p>A failed inspection doesn't always mean an immediate shutdown, but it does mean action is required. Here's what to expect and how to get back into compliance quickly.</p>
+        <div class="article-meta">5 min read</div>
+        <div class="article-link">Coming soon <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="article-card coming-soon">
+        <div class="coming-soon-badge">Coming soon</div>
+        <div class="article-tag">Food trucks</div>
+        <h3>Hood Suppression Requirements for Portland Food Trucks</h3>
+        <p>Portland's food truck operators are subject to the same suppression requirements as fixed kitchens. Here's what you need to know before your next permit renewal.</p>
+        <div class="article-meta">4 min read</div>
+        <div class="article-link">Coming soon <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="article-card coming-soon">
+        <div class="coming-soon-badge">Coming soon</div>
+        <div class="article-tag">System basics</div>
+        <h3>How a Wet Chemical Suppression System Actually Works</h3>
+        <p>Most restaurant operators have never seen their system activate. Understanding how it works helps you know what to look for and why each inspection item matters.</p>
+        <div class="article-meta">6 min read</div>
+        <div class="article-link">Coming soon <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="article-card coming-soon">
+        <div class="coming-soon-badge">Coming soon</div>
+        <div class="article-tag">Insurance</div>
+        <h3>Why Your Insurer Cares About Your Suppression System Maintenance Records</h3>
+        <p>A lapsed inspection isn't just a code violation. It can give your insurer grounds to reduce or deny a claim after a kitchen fire. Here's what to keep on file.</p>
+        <div class="article-meta">4 min read</div>
+        <div class="article-link">Coming soon <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div>
+      <h2>Due for an inspection?</h2>
+      <p>Semi-annual inspections are required by Oregon law. We serve restaurants and food trucks throughout the Portland metro.</p>
+    </div>
+    <div>
+      <a href="contact.html" class="btn-primary">Schedule an inspection</a>
+    </div>
+  </div>
+
+  <div class="cities">
+    <p>Timberline Fire Systems provides kitchen hood suppression inspections throughout the Portland metro area including Portland, Beaverton, Hillsboro, Gresham, Lake Oswego, Tigard, Tualatin, Sherwood, Wilsonville, Oregon City, Happy Valley, Canby, Clackamas, Milwaukie, West Linn, Troutdale, Fairview, Wood Village, Cornelius, Forest Grove, and surrounding communities in Multnomah, Washington, and Clackamas counties.</p>
+  </div>
+
+  <footer>
+    <div class="footer-name">TIMBERLINE FIRE SYSTEMS</div>
+    <div class="footer-copy">© 2026 Timberline Fire Systems LLC. Beaverton, Oregon.</div>
+    <div class="footer-links">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="learning-center.html">Learning Center</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
