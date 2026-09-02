@@ -268,7 +268,74 @@
       margin-top: 2px;
       color: var(--copper);
     }
+    /* ── SCOPE SECTION ── */
+    .scope-section {
+      padding: 5rem 4rem;
+      background: var(--offwhite);
+      border-top: 0.5px solid var(--dim);
+      border-bottom: 0.5px solid var(--dim);
+    }
 
+    .scope-inner {
+      max-width: 640px;
+    }
+
+    .scope-section h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(22px, 2.5vw, 28px);
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .scope-section > .scope-inner > p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .scope-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 1.75rem;
+    }
+
+    .scope-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 0.75rem 0;
+      border-bottom: 0.5px solid var(--dim);
+      font-size: 14px;
+      color: var(--body);
+      line-height: 1.6;
+    }
+
+    .scope-list li:first-child { border-top: 0.5px solid var(--dim); }
+
+    .scope-list li::before {
+      content: '—';
+      color: var(--copper);
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+
+    .scope-list li em {
+      color: var(--muted);
+      font-style: normal;
+      font-size: 13px;
+    }
+
+    .scope-note {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
     /* ── QUOTE BUILDER PLACEHOLDER ── */
     .quote-placeholder {
       padding: 6rem 4rem;
@@ -567,7 +634,22 @@
       </div>
     </div>
   </section>
-
+  <!-- SCOPE / WHAT WE DON'T COVER -->
+  <section class="scope-section">
+    <div class="scope-inner">
+      <div class="eyebrow-sm">What we don't cover</div>
+      <h2>We stay in our lane.</h2>
+      <p>Timberline focuses on inspecting and servicing existing fixed fire suppression systems. A few things we don't handle:</p>
+      <ul class="scope-list">
+        <li>Fire alarm systems</li>
+        <li>Fire sprinkler systems and standpipes</li>
+        <li>Grease duct and hood cleaning <em>(different trade, ask us for a referral)</em></li>
+        <li>New system installation</li>
+        <li>Data center and server room clean agent systems, at this time</li>
+      </ul>
+      <p class="scope-note">If you're not sure whether your system falls under what we do, reach out and we'll point you in the right direction, even if that's toward someone else.</p>
+    </div>
+  </section>
   <!-- QUOTE BUILDER PLACEHOLDER -->
   <!-- FLAG: Phase 3 — replace with interactive quote builder and calendar booking -->
   <div class="quote-placeholder">
