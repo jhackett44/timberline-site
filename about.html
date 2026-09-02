@@ -393,10 +393,6 @@
       line-height: 1.4;
     }
 
-    /* FLAG: add Amerex KP cert card once obtained */
-    /* FLAG: update FED Learning Center card once certification is complete */
-    /* FLAG: confirm "fully insured" before going live */
-
     /* ── AREA SECTION ── */
     .area-section {
       padding: 7rem 4rem;
@@ -430,28 +426,14 @@
 
     .area-section p:last-child { margin-bottom: 0; }
 
-    .area-map-placeholder {
-      background: var(--offwhite);
+        .area-map-wrap {
       border: 0.5px solid var(--dim);
-      height: 360px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
+      overflow: hidden;
+      filter: grayscale(25%) contrast(1.05);
     }
 
-    /* FLAG: replace map placeholder with either:
-       1. A Portland aerial photo (recommended, images/portland.jpg)
-       2. An embedded Google Maps iframe showing your service area
-       3. A custom SVG map of the tri-county area */
-    .area-map-placeholder svg { color: rgba(29,43,43,0.15); }
-
-    .area-map-placeholder p {
-      font-size: 12px;
-      color: rgba(29,43,43,0.3);
-      letter-spacing: 0.06em;
-      margin-bottom: 0;
+    .area-map-wrap iframe {
+      display: block;
     }
 
     .county-list {
@@ -689,11 +671,11 @@
         <div class="founder-copper-rule"></div>
         <div class="eyebrow-sm">The founder</div>
         <h2>Meet Josh, founder of Timberline Fire Systems.</h2>
-        <p>I spent nearly a decade working in commercial kitchens before making the move to fire suppression. Combined with over twenty years of running my own businesses, that experience shapes everything about how Timberline operates.</p>
+        <p>I spent nearly a decade working in the restaurant industry before making the move to fire suppression. Combined with over twenty years of running my own businesses, that experience shapes everything about how Timberline operates.</p>
         <p>I've worked Friday night services. I know what it looks like when something goes wrong mid-shift, and I know exactly what an unplanned hour of downtime costs an operator. That perspective doesn't come from a fire protection textbook.</p>
 
         <div class="pull-quote">
-          <p>"I built the inspection company I'd want to call if I were still running a kitchen."</p>
+          <p>"I built the inspection company I'd want on my side if I were still working a Friday night rush."</p>
         </div>
 
         <p>When I made the move into fire suppression, I wasn't just learning a trade. I was building the kind of service I always wished existed on the other side of the hood.</p>
@@ -769,8 +751,8 @@
         </div>
         <div>
           <!-- FLAG: update label from "in progress" once FED cert is complete -->
-          <div class="cred-card-label">In progress</div>
-          <div class="cred-card-val">FED Learning Center Certification</div>
+          <div class="cred-card-label">Always training</div>
+          <div class="cred-card-val">FED Learning Center Certifications</div>
         </div>
       </div>
       <div class="cred-card">
@@ -789,7 +771,7 @@
         <div>
           <!-- FLAG: confirm fully insured before going live -->
           <div class="cred-card-label">Business</div>
-          <div class="cred-card-val">Oregon LLC, fully insured and bonded</div>
+          <div class="cred-card-val">Licensed (CCB #pending), insured, and bonded</div>
         </div>
       </div>
     </div>
@@ -800,24 +782,26 @@
     <div>
       <div class="eyebrow-sm">Where we work</div>
       <h2>Beaverton based. Portland metro focused.</h2>
-      <p>Timberline is based in Beaverton and serves the full Portland metro including Washington, Multnomah, and Clackamas counties. Restaurants, ghost kitchens, food trucks, and commercial kitchens of all sizes.</p>
+      <p>Timberline is based in Beaverton and serves the full Portland metro including Washington, Multnomah, and Clackamas counties. Restaurants, ghost kitchens, churches, schools, food trucks, and commercial kitchens of all sizes.</p>
       <p>Portland's food truck community is a particular focus. With over 500 food trucks operating in the metro, it's one of the most underserved markets for suppression inspection in the region.</p>
       <div class="county-list">
-        <div class="county-item"><div class="county-dot"></div><div class="county-name">Multnomah County</div><div class="county-cities">Portland, Gresham, Troutdale</div></div>
-        <div class="county-item"><div class="county-dot"></div><div class="county-name">Washington County</div><div class="county-cities">Beaverton, Hillsboro, Tigard</div></div>
-        <div class="county-item"><div class="county-dot"></div><div class="county-name">Clackamas County</div><div class="county-cities">Oregon City, Happy Valley, Canby</div></div>
+        <div class="county-item"><div class="county-dot"></div><div class="county-name">Multnomah County</div><div class="county-cities">Portland, Gresham, Troutdale, Fairview, Wood Village</div></div>
+        <div class="county-item"><div class="county-dot"></div><div class="county-name">Washington County</div><div class="county-cities">Beaverton, Hillsboro, Tigard, Tualatin, Sherwood, Forest Grove</div></div>
+        <div class="county-item"><div class="county-dot"></div><div class="county-name">Clackamas County</div><div class="county-cities">Oregon City, Happy Valley, Canby, Milwaukie, West Linn, Wilsonville</div></div>
       </div>
     </div>
 
-    <!-- FLAG: replace map placeholder with Portland aerial photo or Google Maps embed.
-         Recommended: moody Portland cityscape image saved as images/portland.jpg
-         OR embed a Google Maps iframe showing the tri-county service area -->
-    <div class="area-map-placeholder">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
-        <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
-        <circle cx="12" cy="9" r="2.5"/>
-      </svg>
-      <p>Map or photo coming soon</p>
+        <div class="area-map-wrap">
+      <iframe
+        src="https://maps.google.com/maps?q=Beaverton,+OR&t=&z=9&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="360"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Timberline Fire Systems service area map">
+      </iframe>
     </div>
   </section>
 
