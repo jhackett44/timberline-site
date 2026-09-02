@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Food trucks with cooking equipment under a hood are held to the same NFPA 96 fire suppression standard as full-service restaurants. Here's what Portland food truck operators need to know.">
+  <title>Hood Suppression Requirements for Portland Food Trucks — Timberline Fire Systems</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --fir: #1C2B2B;
+      --slate: #263535;
+      --copper: #C0845A;
+      --teal: #3D6B6B;
+      --teal-mid: #5C8F8F;
+      --teal-light: #7AADAD;
+      --white: #F5F2ED;
+      --offwhite: #EAE6DF;
+      --body: #2E3F3F;
+      --muted: #5C7A7A;
+      --dim: rgba(29, 43, 43, 0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--body); font-family: 'DM Sans', sans-serif; font-weight: 400; line-height: 1.8; font-size: 16px; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: var(--fir); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { display: flex; align-items: center; gap: 14px; }
+    .nav-logo-text .name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; line-height: 1; }
+    .nav-logo-text .sub { font-size: 9px; color: var(--teal-light); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; gap: 2.5rem; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-light); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-cta { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid var(--copper); color: var(--copper); padding: 9px 22px; transition: background 0.15s, color 0.15s; }
+    .nav-cta:hover { background: var(--copper); color: var(--fir); }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header { background: var(--fir); padding: 5rem 4rem 4rem; border-bottom: 3px solid var(--copper); }
+
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--teal-mid); margin-bottom: 1.5rem; }
+    .breadcrumb a:hover { color: var(--teal-light); }
+    .breadcrumb span { color: var(--teal-light); }
+
+    .article-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--copper); margin-bottom: 1.25rem; }
+
+    .article-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4.5vw, 54px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.01em; max-width: 760px; }
+
+    .article-meta-row { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .meta-item { font-size: 12px; color: var(--teal-mid); display: flex; align-items: center; gap: 6px; }
+
+    /* ── HERO IMAGE ── */
+    .article-hero-img { width: 100%; height: 420px; object-fit: cover; display: block; }
+    /* FLAG: swap for an actual food truck photo when available */
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 5rem; padding: 5rem 4rem; align-items: start; max-width: 1200px; margin: 0 auto; }
+
+    .article-content h2 { font-family: 'DM Sans', sans-serif; font-size: clamp(20px, 2vw, 26px); font-weight: 500; color: var(--fir); line-height: 1.25; margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.01em; }
+    .article-content h2:first-child { margin-top: 0; }
+    .article-content p { font-size: 16px; color: var(--body); line-height: 1.85; margin-bottom: 1.25rem; }
+
+    .article-content strong { font-weight: 500; color: var(--fir); }
+
+    .article-callout { background: var(--offwhite); border-left: 3px solid var(--copper); padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .article-callout p { font-size: 15px; color: var(--body); line-height: 1.75; margin-bottom: 0; }
+    .article-callout strong { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--copper); margin-bottom: 0.5rem; }
+
+    /* ── SIDEBAR ── */
+    .article-sidebar { position: sticky; top: 6rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .sidebar-card { background: var(--offwhite); padding: 1.75rem; border-top: 3px solid var(--copper); }
+    .sidebar-card h3 { font-size: 14px; font-weight: 500; color: var(--fir); margin-bottom: 0.75rem; line-height: 1.3; }
+    .sidebar-card p { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
+
+    .btn-primary { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: var(--fir); color: var(--white); padding: 12px 20px; display: inline-block; transition: background 0.15s; width: 100%; text-align: center; }
+    .btn-primary:hover { background: var(--slate); }
+
+    .sidebar-related h3 { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 1rem; }
+    .related-link { display: flex; align-items: flex-start; gap: 10px; padding: 0.9rem 0; border-bottom: 0.5px solid var(--dim); font-size: 13px; color: var(--fir); line-height: 1.5; }
+    .related-link:first-of-type { border-top: 0.5px solid var(--dim); }
+    .related-link:hover { color: var(--copper); }
+    .related-link::before { content: ''; width: 4px; height: 4px; background: var(--copper); flex-shrink: 0; margin-top: 6px; }
+
+    /* ── CTA BAND ── */
+    .cta-band { background: var(--fir); padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .cta-band p { font-size: 15px; color: var(--teal-light); line-height: 1.75; }
+    .cta-right { border-left: 0.5px solid rgba(92,143,143,0.25); padding-left: 4rem; display: flex; flex-direction: column; gap: 1.75rem; }
+    .cta-contact-row { display: flex; align-items: center; gap: 16px; }
+    .cta-icon { width: 44px; height: 44px; border: 0.5px solid rgba(192,132,90,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--copper); }
+    .clabel { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 3px; }
+    .cval { font-size: 16px; font-weight: 500; color: var(--white); }
+
+    /* ── FOOTER ── */
+    footer { padding: 2rem 4rem; background: var(--fir); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; }
+    .footer-copy { font-size: 12px; color: var(--teal-light); }
+    .footer-links { display: flex; gap: 2rem; font-size: 12px; color: var(--teal-light); }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .nav-links { display: none; }
+      .article-header { padding: 3rem 1.5rem; }
+      .article-hero-img { height: 240px; }
+      .article-layout { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.5rem; }
+      .article-sidebar { position: static; }
+      .cta-band { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+      .cta-right { border-left: none; padding-left: 0; border-top: 0.5px solid rgba(92,143,143,0.25); padding-top: 2.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">
+      <svg width="34" height="27" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+        <polygon points="20,2 38,30 2,30" fill="none" stroke="#C0845A" stroke-width="1.5"/>
+        <polygon points="20,12 30,30 10,30" fill="#C0845A" opacity="0.2"/>
+        <line x1="2" y1="30" x2="38" y2="30" stroke="#5C8F8F" stroke-width="1.5"/>
+      </svg>
+      <div class="nav-logo-text">
+        <div class="name">TIMBERLINE</div>
+        <div class="sub">Fire Systems</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="../services.html">Services</a>
+      <a href="../about.html">About</a>
+      <a href="../learning-center.html" class="active">Learning Center</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <a href="../contact.html" class="nav-cta">Schedule Inspection</a>
+  </nav>
+
+  <!-- ARTICLE HEADER -->
+  <div class="article-header">
+    <div class="breadcrumb">
+      <a href="../learning-center.html">Learning Center</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      <span>Food trucks</span>
+    </div>
+    <div class="article-tag">Food trucks</div>
+    <h1>Hood Suppression Requirements for Portland Food Trucks</h1>
+    <div class="article-meta-row">
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        4 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Published by Timberline Fire Systems
+      </div>
+      <div class="meta-item">Portland, Oregon</div>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <!-- FLAG: swap for an actual food truck photo when available. images/card-foodtruck.jpg works as placeholder -->
+  <img class="article-hero-img" src="../images/card-foodtruck.jpg" alt="Food truck kitchen requiring fire suppression system">
+
+  <!-- ARTICLE LAYOUT -->
+  <div class="article-layout">
+
+    <article class="article-content">
+
+      <p>Portland has one of the largest food truck scenes in the country, with more than 500 trucks operating across the metro at any given time. What a lot of first-time operators don't realize is that a food truck with cooking equipment under a hood is held to the exact same fire suppression standard as a full-service restaurant. Here's what that actually means for your truck.</p>
+
+      <h2>The short answer: NFPA 96 applies to mobile kitchens too</h2>
+      <p>NFPA 96 doesn't distinguish between a building and a vehicle. If your truck has a Type I hood over grease-producing cooking equipment, wet chemical fire suppression is required, and that system needs to be inspected on the same semi-annual schedule as any fixed commercial kitchen.</p>
+      <p>Oregon and Portland both enforce this. A mobile food unit isn't exempt just because it moves.</p>
+
+      <h2>What's different about a food truck inspection?</h2>
+      <p>The core inspection is the same: nozzles, fusible links, agent cylinder, pull station, hood clearance. But a few things are unique to a mobile kitchen and worth knowing before your technician shows up.</p>
+
+      <div class="article-callout">
+        <strong>Manual actuation distance</strong>
+        <p>For fixed kitchens, NFPA 96 recommends a manual pull station be located 10 to 20 feet from the hazard. Mobile applications follow the same range, but in a truck's tight footprint that distance often has to be measured and verified carefully since there's a lot less room to work with than a full kitchen.</p>
+      </div>
+
+      <p><strong>Fuel connections.</strong> Most trucks run on propane rather than natural gas, and some run on electric. Whatever the setup, the interlock between your suppression system and your fuel source has to be verified as part of the inspection, same as it would be in a building, just with propane specific components in play.</p>
+
+      <p><strong>Access and layout.</strong> Every truck is laid out a little differently, which means every inspection is a little different too. A technician who hasn't worked mobile kitchens before can find this genuinely disorienting. It's one of the reasons food truck operators report a harder time finding someone willing to do the job at all.</p>
+
+      <h2>Do you need a different permit for the suppression system?</h2>
+      <p>The suppression system itself isn't permitted separately from your mobile food unit permit, but your inspection report is part of what keeps that permit valid. If your suppression system lapses on its inspection schedule, it can affect your ability to operate legally, the same way it would put a restaurant's operating permit at risk.</p>
+      <p>Keep your signed inspection reports on file. If you ever get asked for proof of compliance during a permit renewal or a health inspection, that report is what you hand over.</p>
+
+      <h2>What about trucks that share a commissary kitchen?</h2>
+      <p>Some food trucks prep at a shared commissary and only do light cooking on the truck itself. If your truck doesn't have a hood over grease-producing equipment, wet chemical suppression may not apply to you at all. This is worth confirming rather than assuming either way, since the requirement is based on your equipment and hood setup, not on the fact that you operate a truck.</p>
+
+      <h2>Why this market gets overlooked</h2>
+      <p>Most suppression companies are built around fixed commercial kitchens and treat mobile units as an inconvenience. Tight spaces, unconventional layouts, and the fact that a truck might not be parked in the same spot twice all make food trucks more work per visit than a stationary restaurant.</p>
+
+      <div class="article-callout">
+        <strong>Bottom line</strong>
+        <p>That's exactly why so many food truck operators report trouble getting a technician to call them back at all.</p>
+      </div>
+
+      <h2>Ready to get your truck on the schedule?</h2>
+      <p>Timberline Fire Systems works directly with Portland's food truck community. We understand mobile kitchen layouts and don't treat your truck as an afterthought. Contact us to schedule an inspection.</p>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <h3>Truck due for an inspection?</h3>
+        <p>We work directly with Portland's food truck community. Call or email to get on the schedule.</p>
+        <a href="../contact.html" class="btn-primary">Schedule an inspection</a>
+      </div>
+
+      <div class="sidebar-card sidebar-related">
+        <h3>Related articles</h3>
+        <a href="how-often-hood-inspection-oregon.html" class="related-link">How Often Does a Restaurant Hood Suppression System Need to Be Inspected in Oregon?</a>
+        <a href="failed-inspection-oregon.html" class="related-link">What Happens If Your Kitchen Hood Suppression System Fails Inspection in Oregon?</a>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="cta-left">
+      <h2>Ready to get your kitchen compliant?</h2>
+      <p>Semi-annual inspections are required by Oregon law. Call or email to get on the schedule.</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="clabel">Phone</div>
+          <div class="cval">(503) 828-1460</div>
+        </div>
+      </div>
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="clabel">Email</div>
+          <div class="cval">hello@timberlinefiresystems.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-name">TIMBERLINE FIRE SYSTEMS</div>
+    <div class="footer-copy">© 2026 Timberline Fire Systems LLC. Beaverton, Oregon.</div>
+    <div class="footer-links">
+      <a href="../services.html">Services</a>
+      <a href="../about.html">About</a>
+      <a href="../learning-center.html">Learning Center</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
