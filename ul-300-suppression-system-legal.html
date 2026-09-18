@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Systems installed before UL 300 took effect may not meet current fire code, even if they pass a visual inspection. Here's the deadline most Portland restaurant owners have never heard of.">
+  <title>Is Your Suppression System Actually Legal? The UL 300 Deadline Most Restaurant Owners Don't Know About — Timberline Fire Systems</title>
+  <link rel="canonical" href="https://www.timberlinefiresystems.com/articles/ul-300-suppression-system-legal.html">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --fir: #1C2B2B;
+      --slate: #263535;
+      --copper: #C0845A;
+      --teal: #3D6B6B;
+      --teal-mid: #5C8F8F;
+      --teal-light: #7AADAD;
+      --white: #F5F2ED;
+      --offwhite: #EAE6DF;
+      --body: #2E3F3F;
+      --muted: #5C7A7A;
+      --dim: rgba(29, 43, 43, 0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--body); font-family: 'DM Sans', sans-serif; font-weight: 400; line-height: 1.8; font-size: 16px; }
+    a { color: inherit; text-decoration: none; }
+
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: var(--fir); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { display: flex; align-items: center; gap: 14px; }
+    .nav-logo-text .name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; line-height: 1; }
+    .nav-logo-text .sub { font-size: 9px; color: var(--teal-light); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; gap: 2.5rem; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-light); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-cta { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid var(--copper); color: var(--copper); padding: 9px 22px; transition: background 0.15s, color 0.15s; }
+    .nav-cta:hover { background: var(--copper); color: var(--fir); }
+
+    .article-header { background: var(--fir); padding: 5rem 4rem 4rem; border-bottom: 3px solid var(--copper); }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--teal-mid); margin-bottom: 1.5rem; }
+    .breadcrumb a:hover { color: var(--teal-light); }
+    .breadcrumb span { color: var(--teal-light); }
+    .article-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--copper); margin-bottom: 1.25rem; }
+    .article-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4.2vw, 50px); font-weight: 600; color: var(--white); line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: -0.01em; max-width: 800px; }
+    .article-meta-row { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .meta-item { font-size: 12px; color: var(--teal-mid); display: flex; align-items: center; gap: 6px; }
+
+    .article-hero-img { width: 100%; height: 420px; object-fit: cover; display: block; }
+
+    .article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 5rem; padding: 5rem 4rem; align-items: start; max-width: 1200px; margin: 0 auto; }
+    .article-content h2 { font-family: 'DM Sans', sans-serif; font-size: clamp(20px, 2vw, 26px); font-weight: 500; color: var(--fir); line-height: 1.25; margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.01em; }
+    .article-content h2:first-child { margin-top: 0; }
+    .article-content p { font-size: 16px; color: var(--body); line-height: 1.85; margin-bottom: 1.25rem; }
+    .article-content strong { font-weight: 500; color: var(--fir); }
+
+    .article-callout { background: var(--offwhite); border-left: 3px solid var(--copper); padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .article-callout p { font-size: 15px; color: var(--body); line-height: 1.75; margin-bottom: 0; }
+    .article-callout strong { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--copper); margin-bottom: 0.5rem; }
+
+    .article-sidebar { position: sticky; top: 6rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sidebar-card { background: var(--offwhite); padding: 1.75rem; border-top: 3px solid var(--copper); }
+    .sidebar-card h3 { font-size: 14px; font-weight: 500; color: var(--fir); margin-bottom: 0.75rem; line-height: 1.3; }
+    .sidebar-card p { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
+    .btn-primary { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: var(--fir); color: var(--white); padding: 12px 20px; display: inline-block; transition: background 0.15s; width: 100%; text-align: center; }
+    .btn-primary:hover { background: var(--slate); }
+    .sidebar-related h3 { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 1rem; }
+    .related-link { display: flex; align-items: flex-start; gap: 10px; padding: 0.9rem 0; border-bottom: 0.5px solid var(--dim); font-size: 13px; color: var(--fir); line-height: 1.5; }
+    .related-link:first-of-type { border-top: 0.5px solid var(--dim); }
+    .related-link:hover { color: var(--copper); }
+    .related-link::before { content: ''; width: 4px; height: 4px; background: var(--copper); flex-shrink: 0; margin-top: 6px; }
+
+    .cta-band { background: var(--fir); padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .cta-band p { font-size: 15px; color: var(--teal-light); line-height: 1.75; }
+    .cta-right { border-left: 0.5px solid rgba(92,143,143,0.25); padding-left: 4rem; display: flex; flex-direction: column; gap: 1.75rem; }
+    .cta-contact-row { display: flex; align-items: center; gap: 16px; }
+    .cta-icon { width: 44px; height: 44px; border: 0.5px solid rgba(192,132,90,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--copper); }
+    .clabel { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 3px; }
+    .cval { font-size: 16px; font-weight: 500; color: var(--white); }
+
+    footer { padding: 2rem 4rem; background: var(--fir); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; }
+    .footer-copy { font-size: 12px; color: var(--teal-light); }
+    .footer-links { display: flex; gap: 2rem; font-size: 12px; color: var(--teal-light); }
+    .footer-links a:hover { color: var(--white); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .nav-links { display: none; }
+      .article-header { padding: 3rem 1.5rem; }
+      .article-hero-img { height: 240px; }
+      .article-layout { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.5rem; }
+      .article-sidebar { position: static; }
+      .cta-band { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+      .cta-right { border-left: none; padding-left: 0; border-top: 0.5px solid rgba(92,143,143,0.25); padding-top: 2.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">
+      <svg width="34" height="27" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+        <polygon points="20,2 38,30 2,30" fill="none" stroke="#C0845A" stroke-width="1.5"/>
+        <polygon points="20,12 30,30 10,30" fill="#C0845A" opacity="0.2"/>
+        <line x1="2" y1="30" x2="38" y2="30" stroke="#5C8F8F" stroke-width="1.5"/>
+      </svg>
+      <div class="nav-logo-text">
+        <div class="name">TIMBERLINE</div>
+        <div class="sub">Fire Systems</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="../services.html">Services</a>
+      <a href="../about.html">About</a>
+      <a href="../learning-center.html" class="active">Learning Center</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <a href="../contact.html" class="nav-cta">Schedule Inspection</a>
+  </nav>
+
+  <div class="article-header">
+    <div class="breadcrumb">
+      <a href="../learning-center.html">Learning Center</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      <span>Code compliance</span>
+    </div>
+    <div class="article-tag">Code compliance</div>
+    <h1>Is Your Suppression System Actually Legal? The UL 300 Deadline Most Restaurant Owners Don't Know About</h1>
+    <div class="article-meta-row">
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        5 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Published by Timberline Fire Systems
+      </div>
+      <div class="meta-item">Portland, Oregon</div>
+    </div>
+  </div>
+
+  <!-- FLAG: swap for a real UL 300 label or wet chemical cylinder photo when available -->
+  <img class="article-hero-img" src="../images/card-inspection.jpg" alt="Kitchen hood suppression system cylinder and nozzles">
+
+  <div class="article-layout">
+
+    <article class="article-content">
+
+      <p>A suppression system can pass a visual inspection and still not meet current fire code. That sounds like a contradiction, but it's a real gap that catches restaurant owners off guard, especially in older buildings with systems nobody's thought much about in years. Here's the deadline behind it, and how to find out where your system actually stands.</p>
+
+      <h2>What is UL 300?</h2>
+      <p>UL 300 is the testing standard Underwriters Laboratories uses for pre-engineered fire suppression systems that protect commercial kitchen hoods, ducts, and cooking equipment. Before UL 300 became the standard, most systems on the market used dry chemical agent. UL 300 systems use wet chemical agent instead, which is significantly more effective against modern deep fryers and the higher-efficiency cooking equipment that became common through the 1990s and 2000s.</p>
+      <p>The short version: wet chemical, UL 300 compliant, is the standard today. Dry chemical, pre-UL 300, is not.</p>
+
+      <h2>Why does this matter if the system still works?</h2>
+      <p>A dry chemical system can still discharge and still put out a fire. That's not the issue. The issue is that dry chemical agent wasn't designed for the grease loads and cooking temperatures common in modern kitchens, and testing showed it performs significantly worse against the specific fire risks a contemporary kitchen actually presents.</p>
+
+      <div class="article-callout">
+        <strong>Important</strong>
+        <p>A dry chemical system can pass a semi-annual inspection, in the sense that its components are intact and functional, while still being out of compliance with current code simply because of what agent it uses. Inspection and code compliance are two different questions.</p>
+      </div>
+
+      <h2>Which buildings are most likely to have this issue?</h2>
+      <p>Older buildings, older restaurant spaces, and any kitchen where the suppression system hasn't been touched since a previous tenant are the most likely candidates. If a restaurant has changed hands a few times and nobody's specifically looked at whether the suppression system itself was ever upgraded, as opposed to just inspected twice a year, there's a real chance it's still running the original dry chemical hardware.</p>
+      <p>This is easy to miss because a system can be inspected, tagged, and technically "passing" every six months for years without anyone flagging the underlying agent type as a problem.</p>
+
+      <h2>What triggers a required upgrade?</h2>
+      <p>Generally, a system isn't automatically forced out of service just for being older. But certain events trigger a requirement to upgrade to a UL 300 compliant system, most commonly:</p>
+      <p><strong>A change in cooking equipment or cooking oil.</strong> If you replace a fryer or shift to a different type of cooking oil, that can trigger a review of whether your existing system is still adequate.</p>
+      <p><strong>A change in hood or duct configuration.</strong> Any modification to the exhaust system itself can bring the whole suppression setup back under current code review.</p>
+      <p><strong>The manufacturer no longer supporting the system.</strong> If parts or service for your specific system are no longer available, that alone can force an upgrade since there's no way to keep a discontinued system properly maintained.</p>
+
+      <div class="article-callout">
+        <strong>Bottom line</strong>
+        <p>None of these triggers require you to go looking for a reason to upgrade. But if you're already planning a kitchen remodel, a new fryer, or any change to your hood, it's worth checking your suppression system's compliance status before that work happens, not after.</p>
+      </div>
+
+      <h2>How do you find out what you actually have?</h2>
+      <p>The agent type is usually identifiable from the system's nameplate or tag, and any qualified technician can confirm it during a routine inspection. This isn't something that requires a special visit, it's something worth simply asking about the next time your suppression system is inspected.</p>
+
+      <h2>What if you find out your system isn't UL 300 compliant?</h2>
+      <p>It's not an emergency, and it doesn't mean your kitchen is unsafe today. It means you have information you didn't have before, and it's worth factoring into any future equipment or remodel decisions. Upgrading proactively, on your own timeline, is a much better position than finding out during a permit review for unrelated kitchen work and having to scramble.</p>
+
+      <h2>Ready to find out where your system stands?</h2>
+      <p>Timberline Fire Systems inspects kitchen hood suppression systems across the Portland metro and can tell you exactly what agent type your system uses and whether it meets current code. Contact us to schedule an inspection.</p>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <h3>Not sure what your system has?</h3>
+        <p>We can confirm your agent type and compliance status during a routine inspection.</p>
+        <a href="../contact.html" class="btn-primary">Schedule an inspection</a>
+      </div>
+
+      <div class="sidebar-card sidebar-related">
+        <h3>Related articles</h3>
+        <a href="how-often-hood-inspection-oregon.html" class="related-link">How Often Does a Restaurant Hood Suppression System Need to Be Inspected in Oregon?</a>
+        <a href="failed-inspection-oregon.html" class="related-link">What Happens If Your Kitchen Hood Suppression System Fails Inspection in Oregon?</a>
+        <a href="food-truck-suppression-portland.html" class="related-link">Hood Suppression Requirements for Portland Food Trucks</a>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="cta-band">
+    <div class="cta-left">
+      <h2>Ready to get your kitchen compliant?</h2>
+      <p>Semi-annual inspections are required by Oregon law. Call or email to get on the schedule.</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="clabel">Phone</div>
+          <div class="cval">(503) 828-1460</div>
+        </div>
+      </div>
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="clabel">Email</div>
+          <div class="cval">hello@timberlinefiresystems.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-name">TIMBERLINE FIRE SYSTEMS</div>
+    <div class="footer-copy">© 2026 Timberline Fire Systems LLC. Beaverton, Oregon.</div>
+    <div class="footer-links">
+      <a href="../services.html">Services</a>
+      <a href="../about.html">About</a>
+      <a href="../learning-center.html">Learning Center</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
