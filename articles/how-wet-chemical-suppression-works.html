@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Most restaurant operators have never seen their suppression system fire. Here's how fusible links, agent tanks, and wet chemical agent actually work together to stop a grease fire.">
+  <title>How a Wet Chemical Suppression System Actually Works — Timberline Fire Systems</title>
+  <link rel="canonical" href="https://www.timberlinefiresystems.com/articles/how-wet-chemical-suppression-works.html">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --fir: #1C2B2B;
+      --slate: #263535;
+      --copper: #C0845A;
+      --teal: #3D6B6B;
+      --teal-mid: #5C8F8F;
+      --teal-light: #7AADAD;
+      --white: #F5F2ED;
+      --offwhite: #EAE6DF;
+      --body: #2E3F3F;
+      --muted: #5C7A7A;
+      --dim: rgba(29, 43, 43, 0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--body); font-family: 'DM Sans', sans-serif; font-weight: 400; line-height: 1.8; font-size: 16px; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: var(--fir); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { display: flex; align-items: center; gap: 14px; }
+    .nav-logo-text .name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; line-height: 1; }
+    .nav-logo-text .sub { font-size: 9px; color: var(--teal-light); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; gap: 2.5rem; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-light); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-cta { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid var(--copper); color: var(--copper); padding: 9px 22px; transition: background 0.15s, color 0.15s; }
+    .nav-cta:hover { background: var(--copper); color: var(--fir); }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header { background: var(--fir); padding: 5rem 4rem 4rem; border-bottom: 3px solid var(--copper); }
+
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--teal-mid); margin-bottom: 1.5rem; }
+    .breadcrumb a:hover { color: var(--teal-light); }
+    .breadcrumb span { color: var(--teal-light); }
+
+    .article-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--copper); margin-bottom: 1.25rem; }
+
+    .article-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4.5vw, 54px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.01em; max-width: 760px; }
+
+    .article-meta-row { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .meta-item { font-size: 12px; color: var(--teal-mid); display: flex; align-items: center; gap: 6px; }
+
+    /* ── HERO IMAGE ── */
+    .article-hero-img { width: 100%; height: 420px; object-fit: cover; display: block; }
+    /* FLAG: swap for a photo of an actual fusible link/agent tank setup when available */
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 5rem; padding: 5rem 4rem; align-items: start; max-width: 1200px; margin: 0 auto; }
+
+    .article-content h2 { font-family: 'DM Sans', sans-serif; font-size: clamp(20px, 2vw, 26px); font-weight: 500; color: var(--fir); line-height: 1.25; margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.01em; }
+    .article-content h2:first-child { margin-top: 0; }
+    .article-content p { font-size: 16px; color: var(--body); line-height: 1.85; margin-bottom: 1.25rem; }
+
+    .article-content strong { font-weight: 500; color: var(--fir); }
+
+    .article-callout { background: var(--offwhite); border-left: 3px solid var(--copper); padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .article-callout p { font-size: 15px; color: var(--body); line-height: 1.75; margin-bottom: 0; }
+    .article-callout strong { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--copper); margin-bottom: 0.5rem; }
+
+    /* ── SIDEBAR ── */
+    .article-sidebar { position: sticky; top: 6rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .sidebar-card { background: var(--offwhite); padding: 1.75rem; border-top: 3px solid var(--copper); }
+    .sidebar-card h3 { font-size: 14px; font-weight: 500; color: var(--fir); margin-bottom: 0.75rem; line-height: 1.3; }
+    .sidebar-card p { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
+
+    .btn-primary { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: var(--fir); color: var(--white); padding: 12px 20px; display: inline-block; transition: background 0.15s; width: 100%; text-align: center; }
+    .btn-primary:hover { background: var(--slate); }
+
+    .sidebar-related h3 { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 1rem; }
+    .related-link { display: flex; align-items: flex-start; gap: 10px; padding: 0.9rem 0; border-bottom: 0.5px solid var(--dim); font-size: 13px; color: var(--fir); line-height: 1.5; }
+    .related-link:first-of-type { border-top: 0.5px solid var(--dim); }
+    .related-link:hover { color: var(--copper); }
+    .related-link::before { content: ''; width: 4px; height: 4px; background: var(--copper); flex-shrink: 0; margin-top: 6px; }
+
+    /* ── CTA BAND ── */
+    .cta-band { background: var(--fir); padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .cta-band p { font-size: 15px; color: var(--teal-light); line-height: 1.75; }
+    .cta-right { border-left: 0.5px solid rgba(92,143,143,0.25); padding-left: 4rem; display: flex; flex-direction: column; gap: 1.75rem; }
+    .cta-contact-row { display: flex; align-items: center; gap: 16px; }
+    .cta-icon { width: 44px; height: 44px; border: 0.5px solid rgba(192,132,90,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--copper); }
+    .clabel { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 3px; }
+    .cval { font-size: 16px; font-weight: 500; color: var(--white); }
+
+    /* ── FOOTER ── */
+    footer { padding: 2rem 4rem; background: var(--fir); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; }
+    .footer-copy { font-size: 12px; color: var(--teal-light); }
+    .footer-links { display: flex; gap: 2rem; font-size: 12px; color: var(--teal-light); }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .nav-links { display: none; }
+      .article-header { padding: 3rem 1.5rem; }
+      .article-hero-img { height: 240px; }
+      .article-layout { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.5rem; }
+      .article-sidebar { position: static; }
+      .cta-band { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+      .cta-right { border-left: none; padding-left: 0; border-top: 0.5px solid rgba(92,143,143,0.25); padding-top: 2.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WD4JQ7LJ6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3WD4JQ7LJ6');
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">
+      <svg width="34" height="27" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+        <polygon points="20,2 38,30 2,30" fill="none" stroke="#C0845A" stroke-width="1.5"/>
+        <polygon points="20,12 30,30 10,30" fill="#C0845A" opacity="0.2"/>
+        <line x1="2" y1="30" x2="38" y2="30" stroke="#5C8F8F" stroke-width="1.5"/>
+      </svg>
+      <div class="nav-logo-text">
+        <div class="name">TIMBERLINE</div>
+        <div class="sub">Fire Systems</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="../services.html">Services</a>
+      <a href="../about.html">About</a>
+      <a href="../learning-center.html" class="active">Learning Center</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <a href="../contact.html" class="nav-cta">Schedule Inspection</a>
+  </nav>
+
+  <!-- ARTICLE HEADER -->
+  <div class="article-header">
+    <div class="breadcrumb">
+      <a href="../learning-center.html">Learning Center</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      <span>System basics</span>
+    </div>
+    <div class="article-tag">System basics</div>
+    <h1>How a Wet Chemical Suppression System Actually Works</h1>
+    <div class="article-meta-row">
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        6 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Published by Timberline Fire Systems
+      </div>
+      <div class="meta-item">Portland, Oregon</div>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <!-- FLAG: swap for a photo of an actual fusible link/agent tank setup when available. images/card-inspection.jpg works as placeholder -->
+  <img class="article-hero-img" src="../images/card-inspection.jpg" alt="Wet chemical fire suppression system nozzles and piping over commercial cooking equipment">
+
+  <!-- ARTICLE LAYOUT -->
+  <div class="article-layout">
+
+    <article class="article-content">
+
+      <p>Most restaurant operators have never seen their suppression system activate, and never want to. But understanding roughly how it works makes the twice-a-year inspection make a lot more sense, and helps explain why certain components get so much attention.</p>
+
+      <h2>Detection comes first</h2>
+      <p>Every wet chemical system relies on fusible links, small heat-sensitive components positioned above your cooking equipment. These links are built to separate at a specific temperature. Until that happens, they're holding a cable under tension that keeps the system in its resting state.</p>
+      <p>When a fire pushes temperatures past that threshold, the link separates. That's the entire trigger. No electronics, no sensors, no power required. It's a purely mechanical detection method, which is part of why these systems are so reliable: there's very little that can fail silently.</p>
+
+      <h2>What happens the instant it trips</h2>
+      <p>Once a link separates, the tension it was holding releases, and that pulls a mechanical trip mechanism. That trip punctures a small gas cartridge, which pressurizes the system's agent tank almost instantly.</p>
+      <p>From there, the pressurized wet chemical agent travels through fixed piping to nozzles positioned over your fryers, griddles, and cooking surfaces, and discharges.</p>
+
+      <h2>Why wet chemical agent specifically</h2>
+      <p>The agent is a potassium-based solution, and it doesn't just cool the fire the way water would. When it contacts hot cooking oil, it triggers a chemical reaction called saponification, the same basic chemistry behind making soap. The oil's surface converts into a soapy foam layer almost instantly.</p>
+      <p>That foam blanket does two things at once. It smothers the fire by cutting off oxygen, and it cools the surface enough to prevent the oil from reigniting once the fire's out. That second part matters more than people realize. A grease fire that looks extinguished can reflash if the oil is still hot enough, which is exactly what the foam layer is built to prevent.</p>
+
+      <h2>The system doesn't just discharge, it shuts things down</h2>
+      <p>A properly installed system is tied into an interlock with your gas or electrical supply to the cooking equipment. When the system activates, that connection cuts fuel to the appliances automatically, so the fire isn't still being fed while the agent works.</p>
+
+      <div class="article-callout">
+        <strong>Why we test this</strong>
+        <p>This interlock is one of the components we specifically test during every inspection, since a suppression system that douses a fire but leaves the gas running isn't doing its full job.</p>
+      </div>
+
+      <h2>There's also a manual option</h2>
+      <p>Every system has a manual pull station as a backup to the automatic fusible link trigger, positioned within a specific distance of the hazard so it's reachable in an emergency without walking through the fire itself. Pulling it fires the system exactly the same way a tripped link would.</p>
+
+      <h2>Why this matters for your twice-a-year inspection</h2>
+      <p>Every part of that chain, the fusible links, the gas cartridge, the piping, the nozzles, the interlock, the pull station, has to function correctly for the system to work as designed. That's why an inspection isn't just a visual check.</p>
+
+      <div class="article-callout">
+        <strong>Bottom line</strong>
+        <p>An inspection is a verification that every link in that mechanical chain is still capable of doing its job the one time it actually needs to.</p>
+      </div>
+
+      <h2>Ready to have yours checked?</h2>
+      <p>Timberline Fire Systems inspects wet chemical suppression systems for restaurants and food trucks across the Portland metro. Contact us to schedule an inspection.</p>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <h3>Curious about your own system?</h3>
+        <p>We inspect every component in this chain twice a year. Call or email to get on the schedule.</p>
+        <a href="../contact.html" class="btn-primary">Schedule an inspection</a>
+      </div>
+
+      <div class="sidebar-card sidebar-related">
+        <h3>Related articles</h3>
+        <a href="ul-300-suppression-system-legal.html" class="related-link">Is Your Suppression System Actually Legal? The UL 300 Deadline Most Restaurant Owners Don't Know About</a>
+        <a href="how-often-hood-inspection-oregon.html" class="related-link">How Often Does a Restaurant Hood Suppression System Need to Be Inspected in Oregon?</a>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="cta-left">
+      <h2>Ready to get your kitchen compliant?</h2>
+      <p>Semi-annual inspections are required by Oregon law. Call or email to get on the schedule.</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="clabel">Phone</div>
+          <div class="cval">(503) 828-1460</div>
+        </div>
+      </div>
+      <div class="cta-contact-row">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="clabel">Email</div>
+          <div class="cval">hello@timberlinefiresystems.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-name">TIMBERLINE FIRE SYSTEMS</div>
+    <div class="footer-copy">© 2026 Timberline Fire Systems LLC. Beaverton, Oregon.</div>
+    <div class="footer-links">
+      <a href="../services.html">Services</a>
+      <a href="../about.html">About</a>
+      <a href="../learning-center.html">Learning Center</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
