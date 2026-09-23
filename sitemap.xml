@@ -31,7 +31,7 @@
 
   <url>
     <loc>https://www.timberlinefiresystems.com/learning-center.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -56,10 +56,17 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
     <url>
     <loc>https://www.timberlinefiresystems.com/articles/ul-300-suppression-system-legal.html</loc>
     <lastmod>2026-09-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.timberlinefiresystems.com/articles/how-wet-chemical-suppression-works.html</loc>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
