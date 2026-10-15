@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kitchen hood fire suppression inspection and service for restaurants and food trucks across the Portland metro. NFPA 96 compliant. Serving Beaverton, Portland, Hillsboro and surrounding areas.">
-  <title>Services — Timberline Fire Systems | Portland, OR</title>
+  <meta name="description" content="Kitchen hood fire suppression inspection, portable fire extinguisher service, and backflow testing for restaurants and food trucks across the Portland metro. Serving Beaverton, Portland, Hillsboro and surrounding areas.">
+  <title>Services | Timberline Fire Systems | Portland, OR</title>
     <link rel="canonical" href="https://www.timberlinefiresystems.com/services.html">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -178,9 +178,6 @@
       padding: 6rem 4rem;
     }
 
-    .service-block:nth-child(even) {
-      background: var(--offwhite);
-    }
 
     .service-inner {
       display: grid;
@@ -269,6 +266,45 @@
       margin-top: 2px;
       color: var(--copper);
     }
+
+    /* ── JUMP NAV + CATEGORY HEADERS ── */
+    .jump-nav { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+    .jump-nav a { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid rgba(122,173,173,0.45); color: var(--teal-light); padding: 10px 20px; transition: background 0.15s, color 0.15s, border-color 0.15s; }
+    .jump-nav a:hover { background: var(--copper); border-color: var(--copper); color: var(--fir); }
+    .cat-head { background: var(--fir); padding: 4rem 4rem 3.5rem; border-bottom: 3px solid var(--copper); scroll-margin-top: 4.5rem; }
+    .cat-head h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 46px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.01em; max-width: 700px; }
+    .cat-head p { font-size: 16px; color: var(--teal-light); max-width: 680px; line-height: 1.75; }
+
+    /* ── DETAIL BAND (steps, lists, callouts) ── */
+    .detail-band { background: var(--offwhite); padding: 5rem 4rem; border-top: 0.5px solid var(--dim); }
+    .detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+    .panel h3 { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 1.25rem; padding-bottom: 0.9rem; border-bottom: 2px solid var(--copper); }
+    .panel p { font-size: 15px; color: var(--body); line-height: 1.8; margin-bottom: 1rem; }
+    .panel a { color: var(--copper); border-bottom: 0.5px solid var(--copper); }
+    .steps { list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 1.1rem; }
+    .steps li { counter-increment: step; position: relative; padding-left: 2.4rem; font-size: 15px; line-height: 1.7; color: var(--body); }
+    .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--copper); line-height: 1.2; }
+    .steps strong, .dot-list strong { font-weight: 500; color: var(--fir); }
+    .dot-list { list-style: none; display: flex; flex-direction: column; }
+    .dot-list li { position: relative; padding: 0.7rem 0 0.7rem 17px; border-bottom: 0.5px solid var(--dim); font-size: 15px; line-height: 1.6; color: var(--body); }
+    .dot-list li:first-child { border-top: 0.5px solid var(--dim); }
+    .dot-list li::before { content: ''; position: absolute; left: 0; top: 1.25rem; width: 5px; height: 5px; background: var(--copper); }
+    .dot-list a { color: var(--copper); border-bottom: 0.5px solid var(--copper); }
+    .band-note { margin-top: 2.5rem; font-size: 13px; color: var(--muted); }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 0.5px solid var(--dim); }
+    .faq-item:first-child { border-top: 0.5px solid var(--dim); }
+    .faq-item summary { list-style: none; cursor: pointer; padding: 1.1rem 2rem 1.1rem 0; font-size: 16px; font-weight: 500; color: var(--fir); line-height: 1.45; position: relative; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; position: absolute; right: 4px; top: 0.9rem; font-size: 22px; font-weight: 400; color: var(--copper); }
+    .faq-item[open] summary::after { content: '\2212'; }
+    .faq-item summary:hover { color: var(--copper); }
+    .faq-answer p { font-size: 15px; color: var(--body); line-height: 1.8; margin-bottom: 1.1rem; }
+    .faq-answer a { color: var(--copper); border-bottom: 0.5px solid var(--copper); }
+    .service-block, .detail-band, .cat-head { scroll-margin-top: 4.5rem; }
+
     /* ── SCOPE SECTION ── */
     .scope-section {
       padding: 5rem 4rem;
@@ -320,10 +356,12 @@
     .scope-list li:first-child { border-top: 0.5px solid var(--dim); }
 
     .scope-list li::before {
-      content: '—';
-      color: var(--copper);
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--copper);
       flex-shrink: 0;
-      font-weight: 500;
+      margin-top: 9px;
     }
 
     .scope-list li em {
@@ -502,6 +540,9 @@
       .nav-links { display: none; }
       .page-header { padding: 3rem 1.5rem; }
       .service-block { padding: 4rem 1.5rem; }
+      .cat-head { padding: 3rem 1.5rem 2.5rem; }
+      .detail-band { padding: 3.5rem 1.5rem; }
+      .detail-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .service-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .service-left { position: static; }
       .service-num { font-size: 52px; }
@@ -513,6 +554,134 @@
       footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
     }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often does my system need to be inspected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every six months, and after any activation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be there?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Someone who can give us access to the kitchen, yes. You don't need to follow us around."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my system fails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A failed inspection isn't a shutdown. We'll explain every item and fix what we can on site. See our failed inspection article for more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you do my extinguishers on the same visit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Ask when you book."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I get?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A signed report, an updated tag, and a record you can show your insurer or fire marshal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often do my extinguishers need service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At least once a year, plus a monthly walk-by check by your staff."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What type should be near my fryers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Class K. An ABC dry chemical extinguisher can knock down flames on hot oil, but the oil can reignite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you do this with my hood inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. One visit covers both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you sell extinguishers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We sell new and replacement units, including Class K."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a unit fails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We'll explain what's wrong and what it takes to fix it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often do I need a backflow test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once a year, and again after any repair."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who has to schedule it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You do. The water provider doesn't do the testing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you send the report to the city?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In Portland, testers must submit reports within 10 business days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the test shut off my water?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Briefly, for the part of the building the assembly protects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you cover Beaverton and Hillsboro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each water provider has its own rules, so we follow the one that serves you."
+      }
+    }
+  ]
+}
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WD4JQ7LJ6"></script>
   <script>
@@ -549,9 +718,22 @@
   <!-- PAGE HEADER -->
   <div class="page-header">
     <div class="eyebrow">What we do</div>
-    <h1>Kitchen hood suppression inspection and service.</h1>
-    <p>Every inspection follows NFPA 96 standards and comes with a signed report you can file with your insurer, health inspector, or fire marshal.</p>
+    <h1>Kitchen fire protection and backflow testing.</h1>
+    <p>Hood suppression, portable extinguishers, and backflow assemblies, all from one technician. Every job comes with a signed report you can file with your insurer, health inspector, fire marshal, or water provider.</p>
+    <div class="jump-nav" role="navigation" aria-label="Service sections">
+      <a href="#hood">Hood suppression</a>
+      <a href="#extinguishers">Fire extinguishers</a>
+      <a href="#backflow">Backflow testing</a>
+    </div>
   </div>
+
+  <!-- CATEGORY: Hood suppression -->
+  <!-- FLAG: confirm brand list against your manufacturer training and certifications before publishing -->
+  <section class="cat-head" id="hood">
+    <div class="eyebrow">Hood suppression</div>
+    <h2>Kitchen hood suppression inspection and service.</h2>
+    <p>We inspect and service fixed fire suppression systems in commercial kitchens. That means the wet chemical system over your fryers, griddles, ranges, and charbroilers, plus the pull station, gas shutoff, and piping that go with it. We also service dry chemical kitchen systems. We work on major brands including Ansul, Badger, PyroChem, and Amerex.</p>
+  </section>
 
   <!-- SERVICE 01 -->
   <section class="service-block">
@@ -561,21 +743,21 @@
         <div class="eyebrow-sm">Inspection</div>
         <h2>Semi-annual inspection</h2>
         <!-- FLAG: update price range after field experience -->
-        
       </div>
       <div class="service-right">
-        <p>Oregon law requires all fixed kitchen fire suppression systems to be inspected every six months. We perform a full system inspection per NFPA 96 and provide a signed report documenting every finding.</p>
-        <p>Most inspections are completed in under an hour. We work around your schedule to minimize disruption to your kitchen.</p>
+        <p>The fire code requires suppression systems in commercial kitchens to be inspected every six months, and again after any activation. We test the full system and give you a signed report on every finding.</p>
+        <p>A typical single-hood kitchen takes about an hour. Larger kitchens take longer. We work around your schedule so your line stays running.</p>
         <div class="includes-label">What's included</div>
         <ul class="includes-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Visual inspection of all nozzles and nozzle caps</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fusible link inspection and replacement if needed</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Agent cylinder, pressure gauge, and expellant cartridge inspection</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pull station and manual actuation device inspection</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Visual check of all nozzles and blow-off caps</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fusible links inspected and replaced</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Agent cylinder weight, pressure gauge, and expellant cartridge check</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pull station and manual actuation test</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fuel and electrical shutoff test (gas valve and appliance interlocks)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Check that your cooking line still matches the system design</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Hood and duct clearance check</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fuel and electrical interlock inspection</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Review of system service history and tag</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Signed inspection report documenting all findings</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Review of service history and tag</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Updated service tag and signed report</li>
         </ul>
       </div>
     </div>
@@ -591,18 +773,17 @@
         <div class="eyebrow-sm">Service</div>
         <h2>System service</h2>
         <!-- FLAG: update price range after field experience -->
-        
       </div>
       <div class="service-right">
-        <p>Beyond the inspection, suppression systems require periodic component replacement to stay operational. We handle all standard service items on the same visit when possible.</p>
-        <p>Service items are billed in addition to the inspection fee. We'll walk you through exactly what needs replacing and why before we do anything.</p>
+        <p>Inspection tells you what's wrong. Service fixes it. We handle standard service items on the same visit when we can.</p>
+        <p>We'll walk you through what needs replacing and why before we do anything. Service items are billed in addition to the inspection fee.</p>
         <div class="includes-label">What's included</div>
         <ul class="includes-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fusible link replacement (required semi-annually)</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Nozzle cleaning and nozzle cap replacement</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fusible links replaced at every service visit</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Nozzle cleaning and new blow-off caps</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Expellant cartridge replacement as needed</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Agent cylinder recharge if discharged</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pull station cable and linkage inspection</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Agent cylinder recharge after a discharge</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pull station cable and linkage service</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>System reset and operational test</li>
         </ul>
       </div>
@@ -616,31 +797,278 @@
     <div class="service-inner">
       <div class="service-left">
         <div class="service-num">03</div>
+        <div class="eyebrow-sm">After an activation</div>
+        <h2>After a discharge</h2>
+        <!-- FLAG: update price range after field experience -->
+      </div>
+      <div class="service-right">
+        <p>If your system goes off, call us. The fire code requires service after any activation, and your kitchen shouldn't cook until the system is back in working order.</p>
+        <p>We inspect the system, recharge it, replace what needs replacing, reset it, and update your tag.</p>
+        <div class="includes-label">What's included</div>
+        <ul class="includes-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Full system inspection after discharge</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Agent cylinder recharge</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Replacement of fusible links, cartridges, and blow-off caps as needed</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Check of fuel and electrical shutoff</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>System reset and operational test</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Updated tag and signed report for your insurer</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- SERVICE 04 -->
+  <section class="service-block">
+    <div class="service-inner">
+      <div class="service-left">
+        <div class="service-num">04</div>
         <div class="eyebrow-sm">Mobile kitchens</div>
         <h2>Food truck inspections</h2>
         <!-- FLAG: update price range after field experience -->
-        
       </div>
       <div class="service-right">
-        <p>Food trucks operating in Portland are subject to the same suppression system requirements as fixed commercial kitchens under NFPA 96. Mobile kitchens have unique layout and access challenges that require a technician comfortable working in tight spaces.</p>
-        <p>We work directly with Portland's food truck community and understand the permitting requirements for mobile food units.</p>
+        <p>Food trucks in Portland follow the same suppression rules as fixed kitchens. Mobile kitchens just have tighter spaces and different access, so you want a technician who's comfortable working in them.</p>
+        <p>We work directly with Portland's food truck community and know the mobile food unit permitting process.</p>
         <div class="includes-label">What's included</div>
         <ul class="includes-list">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>All standard inspection items</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Manual actuation distance verification per NFPA 96 (10 to 20 feet for mobile applications)</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>LP gas or electric interlock connection inspection</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Hood and cooking equipment clearance verification</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>LP gas or electric shutoff inspection</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Hood and cooking equipment clearance check</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Signed report formatted for Portland mobile food unit permitting</li>
         </ul>
       </div>
     </div>
   </section>
+
+  <!-- FLAG: "What we look for" is a general list, not field-tested. Revisit after first 5 to 10 jobs. -->
+  <section class="detail-band">
+    <div class="detail-grid">
+        <div class="panel">
+          <h3>How an inspection goes</h3>
+          <ol class="steps"><li><strong>Book a time.</strong> Call or email. We'll work around your prep and service hours.</li><li><strong>Walk-through.</strong> We look at your cooking line and check it against how the system was designed.</li><li><strong>Test and inspect.</strong> We test every part of the system without discharging it.</li><li><strong>Report and tag.</strong> You get a signed report and an updated tag before we leave.</li></ol>
+        </div>
+        <div class="panel">
+          <h3>What we look for</h3>
+          <ul class="dot-list"><li>Missing or damaged blow-off caps</li><li>Fusible links loaded with grease</li><li>Pull station blocked or hard to reach</li><li>Cooking equipment moved or added since the system was installed</li><li>Gas or electric shutoff that doesn't trip</li><li>Expired or missing service tags</li><li>Older systems that may not meet current listing standards (see our <a href="articles/ul-300-suppression-system-legal.html">UL 300 article</a>)</li></ul>
+        </div>
+        <div class="panel">
+          <h3>If we find a problem</h3>
+          <p>We tell you in writing, in plain language. You get a list of what we found, what code it relates to, and what it takes to fix. Many items we can fix on the same visit.</p><p>If a system can't work as designed, we tag it as impaired and notify you in writing. Cooking equipment shouldn't run while the system is out of service. We'd rather say that clearly than hand you a passing report.</p>
+        </div>
+    </div>
+  </section>
+
+  <section class="service-block faq-block">
+    <div class="service-inner">
+      <div class="service-left">
+        <div class="eyebrow-sm">Common questions</div>
+        <h2>Hood suppression FAQ</h2>
+      </div>
+      <div class="service-right">
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How often does my system need to be inspected?</summary>
+            <div class="faq-answer"><p>Every six months, and after any activation.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need to be there?</summary>
+            <div class="faq-answer"><p>Someone who can give us access to the kitchen, yes. You don't need to follow us around.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What if my system fails?</summary>
+            <div class="faq-answer"><p>A failed inspection isn't a shutdown. We'll explain every item and fix what we can on site. See our <a href="articles/failed-inspection-oregon.html">failed inspection article</a> for more.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Can you do my extinguishers on the same visit?</summary>
+            <div class="faq-answer"><p>Yes. Ask when you book.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What do I get?</summary>
+            <div class="faq-answer"><p>A signed report, an updated tag, and a record you can show your insurer or fire marshal.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- CATEGORY: Fire extinguishers -->
+  <section class="cat-head" id="extinguishers">
+    <div class="eyebrow">Fire extinguishers</div>
+    <h2>Portable fire extinguisher service.</h2>
+    <p>Every commercial kitchen needs working portable extinguishers, including a Class K for grease fires. We service them, tag them, and sell new and replacement units.</p>
+  </section>
+
+  <!-- SERVICE 05 -->
+  <section class="service-block">
+    <div class="service-inner">
+      <div class="service-left">
+        <div class="service-num">05</div>
+        <div class="eyebrow-sm">Extinguishers</div>
+        <h2>Annual service and sales</h2>
+        <!-- FLAG: update price range after field experience -->
+      </div>
+      <div class="service-right">
+        <p>NFPA 10 requires a quick check every month and a full maintenance exam at least once a year by a certified technician.</p>
+        <p>Your staff can handle the monthly check. We handle the annual exam and tag every unit. When we're already on site for your suppression system, we can service your extinguishers on the same visit.</p>
+        <div class="includes-label">What's included</div>
+        <ul class="includes-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Annual maintenance exam per NFPA 10 and the manufacturer's service manual</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Check for damage, corrosion, and blocked nozzles</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pressure gauge, weight, and pull pin check</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>New tamper seal and updated service tag on every unit</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Flag any 6-year internal exams or hydrostatic tests that are due</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Class K extinguisher and placard check for commercial kitchens</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Sales of new and replacement extinguishers, including Class K</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Written record for your files</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLAG: "What we look for" is a general list, not field-tested yet. -->
+  <section class="detail-band">
+    <div class="detail-grid">
+        <div class="panel">
+          <h3>How a visit goes</h3>
+          <ol class="steps"><li><strong>Book a time.</strong> Tell us how many units you have and where.</li><li><strong>Walk the building.</strong> We find every extinguisher, including the ones behind the walk-in.</li><li><strong>Service each unit.</strong> We inspect, test, and tag every extinguisher.</li><li><strong>Report.</strong> You get a record of every unit and anything that needs attention.</li></ol>
+        </div>
+        <div class="panel">
+          <h3>What the code expects</h3>
+          <ul class="dot-list"><li><strong>A Class K within 30 feet of your cooking equipment.</strong> Measured by walking path, not a straight line.</li><li><strong>Monthly checks.</strong> Anyone on your staff can do these, at least every 31 days.</li><li><strong>Annual maintenance.</strong> A certified technician, once a year.</li><li><strong>Staff who know how to use them.</strong></li><li>Portland enforces the 2018 edition of NFPA 10.</li></ul>
+        </div>
+        <div class="panel">
+          <h3>What we look for</h3>
+          <ul class="dot-list"><li>No Class K near the fryers and range</li><li>Units blocked, moved, or on the floor</li><li>Missing or broken tamper seals</li><li>Gauges outside the green zone</li><li>Dents, corrosion, or damaged hoses and nozzles</li><li>Missing or out-of-date service tags</li><li>Units due for a 5- or 6-year internal exam</li></ul>
+        </div>
+    </div>
+  </section>
+
+  <section class="service-block faq-block">
+    <div class="service-inner">
+      <div class="service-left">
+        <div class="eyebrow-sm">Common questions</div>
+        <h2>Extinguisher FAQ</h2>
+      </div>
+      <div class="service-right">
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How often do my extinguishers need service?</summary>
+            <div class="faq-answer"><p>At least once a year, plus a monthly walk-by check by your staff.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What type should be near my fryers?</summary>
+            <div class="faq-answer"><p>A Class K. An ABC dry chemical extinguisher can knock down flames on hot oil, but the oil can reignite.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Can you do this with my hood inspection?</summary>
+            <div class="faq-answer"><p>Yes. One visit covers both.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you sell extinguishers?</summary>
+            <div class="faq-answer"><p>Yes. We sell new and replacement units, including Class K.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What if a unit fails?</summary>
+            <div class="faq-answer"><p>We'll explain what's wrong and what it takes to fix it.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- CATEGORY: Backflow testing -->
+  <section class="cat-head" id="backflow">
+    <div class="eyebrow">Backflow testing</div>
+    <h2>Backflow assembly testing.</h2>
+    <p>A backflow assembly keeps dirty water from flowing backward into the public drinking water supply. Water providers require them wherever your plumbing could create that risk, and they have to be tested every year by a state-certified tester.</p>
+  </section>
+
+  <!-- SERVICE 06 -->
+  <section class="service-block">
+    <div class="service-inner">
+      <div class="service-left">
+        <div class="service-num">06</div>
+        <div class="eyebrow-sm">Backflow</div>
+        <h2>Annual backflow testing</h2>
+        <!-- FLAG: update price range after field experience -->
+      </div>
+      <div class="service-right">
+        <p>We test your assemblies, file the report, and tell you plainly if something needs attention. Already booked with us for hood or extinguisher service? Ask us to add backflow to the same visit.</p>
+        <div class="includes-label">What's included</div>
+        <ul class="includes-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Test of each backflow assembly on your property</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Check of shutoff valves, test cocks, and visible condition</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Written test report on the form your water provider requires</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Report sent to your water provider within their deadline</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Retest after repairs</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Reminder when your next annual test is due</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-band">
+    <div class="detail-grid">
+        <div class="panel">
+          <h3>How testing goes</h3>
+          <ol class="steps"><li><strong>Find your assemblies.</strong> We locate each one and note the make, model, and size.</li><li><strong>Test.</strong> We test each assembly with calibrated gauges. Water to that part of your building is off for a short time.</li><li><strong>Report.</strong> You get a copy and we send one to your water provider.</li><li><strong>Retest if needed.</strong> If an assembly fails, we tell you what failed. Once it's repaired, we retest and file the passing report.</li></ol>
+        </div>
+        <div class="panel">
+          <h3>Who needs it</h3>
+          <ul class="dot-list"><li>Fire sprinkler lines</li><li>Irrigation systems</li><li>Boilers</li><li>Water reuse systems</li><li>Anything else your water provider flags</li><li>Not sure if you have one? Look for a metal assembly near your water line with test valves on it, or ask us and we'll help you find out.</li></ul>
+        </div>
+        <div class="panel">
+          <h3>If an assembly fails</h3>
+          <p>A failed test doesn't mean you're in trouble. It means something inside needs attention.</p><p>Don't wait. In Portland, an owner whose assembly fails and isn't fixed promptly can be held responsible for any illness or injury that results.</p>
+        </div>
+    </div>
+  </section>
+
+  <section class="service-block faq-block">
+    <div class="service-inner">
+      <div class="service-left">
+        <div class="eyebrow-sm">Common questions</div>
+        <h2>Backflow FAQ</h2>
+      </div>
+      <div class="service-right">
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How often do I need a backflow test?</summary>
+            <div class="faq-answer"><p>Once a year, and again after any repair.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Who has to schedule it?</summary>
+            <div class="faq-answer"><p>You do. The water provider doesn't do the testing.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you send the report to the city?</summary>
+            <div class="faq-answer"><p>Yes. In Portland, testers must submit reports within 10 business days.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Does the test shut off my water?</summary>
+            <div class="faq-answer"><p>Briefly, for the part of the building the assembly protects.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you cover Beaverton and Hillsboro?</summary>
+            <div class="faq-answer"><p>Yes. Each water provider has its own rules, so we follow the one that serves you.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SCOPE / WHAT WE DON'T COVER -->
   <section class="scope-section">
     <div class="scope-inner">
       <div class="eyebrow-sm">What we don't cover</div>
       <h2>We stay in our lane.</h2>
-      <p>Timberline focuses on inspecting and servicing existing fixed fire suppression systems. A few things we don't handle:</p>
+      <p>Timberline focuses on inspecting and servicing fixed kitchen fire suppression systems, portable extinguishers, and backflow assembly testing. A few things we don't handle:</p>
       <ul class="scope-list">
         <li>Fire alarm systems</li>
         <li>Fire sprinkler systems and standpipes</li>
@@ -652,7 +1080,7 @@
     </div>
   </section>
   <!-- QUOTE BUILDER PLACEHOLDER -->
-  <!-- FLAG: Phase 3 — replace with interactive quote builder and calendar booking -->
+  <!-- FLAG: Phase 3: replace with interactive quote builder and calendar booking -->
   <div class="quote-placeholder">
     <div class="quote-placeholder-inner">
       <div class="quote-badge">Coming soon</div>
@@ -669,7 +1097,7 @@
   <section class="cta-section">
     <div class="cta-left">
       <h2>Ready to get your kitchen compliant?</h2>
-      <p>Semi-annual inspections are required by Oregon law. Pricing is based on system type and complexity. Call or email and we'll get you a quote.</p>
+      <p>Hood suppression systems need inspection every six months. Extinguishers and backflow assemblies need it every year. Pricing is based on system type and complexity. Call or email and we'll get you a quote.</p>
     </div>
     <div class="cta-right">
       <div class="cta-contact-row">
@@ -702,7 +1130,7 @@
 
   <!-- CITIES (SEO) -->
   <div class="cities">
-    <p>Timberline Fire Systems provides kitchen hood suppression inspections throughout the Portland metro area including Portland, Beaverton, Hillsboro, Gresham, Lake Oswego, Tigard, Tualatin, Sherwood, Wilsonville, Oregon City, Happy Valley, Canby, Clackamas, Milwaukie, West Linn, Troutdale, Fairview, Wood Village, Cornelius, Forest Grove, and surrounding communities in Multnomah, Washington, and Clackamas counties.</p>
+    <p>Timberline Fire Systems provides kitchen hood suppression inspections, portable fire extinguisher service, and backflow testing throughout the Portland metro area including Portland, Beaverton, Hillsboro, Gresham, Lake Oswego, Tigard, Tualatin, Sherwood, Wilsonville, Oregon City, Happy Valley, Canby, Clackamas, Milwaukie, West Linn, Troutdale, Fairview, Wood Village, Cornelius, Forest Grove, and surrounding communities in Multnomah, Washington, and Clackamas counties.</p>
   </div>
 
   <!-- FOOTER -->
