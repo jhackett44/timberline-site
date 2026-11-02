@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Annual backflow prevention assembly testing for Portland metro properties with fire sprinkler systems, irrigation, or cross-connection risk. Certified testing from Timberline Fire Systems.">
-  <title>Backflow Prevention Testing — Timberline Fire Systems | Portland, OR</title>
+  <meta name="description" content="Annual backflow assembly testing for Portland metro properties. We test, file the report with your water provider, and tell you plainly if something needs attention.">
+  <title>Backflow Testing | Timberline Fire Systems | Portland, OR</title>
     <link rel="canonical" href="https://www.timberlinefiresystems.com/backflow-testing.html">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -29,110 +29,597 @@
     }
 
     html { scroll-behavior: smooth; }
-    body { background: var(--white); color: var(--body); font-family: 'DM Sans', sans-serif; font-weight: 400; line-height: 1.8; font-size: 16px; }
+
+    body {
+      background: var(--white);
+      color: var(--body);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
     a { color: inherit; text-decoration: none; }
 
     /* ── NAV ── */
-    nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 4rem; background: var(--fir); position: sticky; top: 0; z-index: 100; }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 4rem;
+      background: var(--fir);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
     .nav-logo { display: flex; align-items: center; gap: 14px; }
-    .nav-logo-text .name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; line-height: 1; }
-    .nav-logo-text .sub { font-size: 9px; color: var(--teal-light); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 3px; }
-    .nav-links { display: flex; gap: 2.5rem; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-light); }
+
+    .nav-logo-text .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+
+    .nav-logo-text .sub {
+      font-size: 9px;
+      color: var(--teal-light);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+    }
+
     .nav-links a:hover { color: var(--white); }
-    .nav-cta { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid var(--copper); color: var(--copper); padding: 9px 22px; transition: background 0.15s, color 0.15s; }
+    .nav-links a.active { color: var(--white); }
+
+    .nav-cta {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 0.5px solid var(--copper);
+      color: var(--copper);
+      padding: 9px 22px;
+      transition: background 0.15s, color 0.15s;
+    }
+
     .nav-cta:hover { background: var(--copper); color: var(--fir); }
 
     /* ── PAGE HEADER ── */
-    .page-header { background: var(--fir); padding: 5rem 4rem 4rem; border-bottom: 3px solid var(--copper); }
-    .eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--copper); margin-bottom: 1.25rem; }
-    .page-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4.5vw, 52px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 1.25rem; letter-spacing: -0.01em; max-width: 700px; }
-    .page-header p { font-size: 16px; font-weight: 400; color: var(--teal-light); max-width: 560px; line-height: 1.75; }
+    .page-header {
+      background: var(--fir);
+      padding: 5rem 4rem 4rem;
+      border-bottom: 3px solid var(--copper);
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1.25rem;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+      max-width: 700px;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--teal-light);
+      max-width: 560px;
+      line-height: 1.75;
+    }
 
     /* ── SHARED ── */
     hr { border: none; border-top: 0.5px solid var(--dim); margin: 0 4rem; }
-    .eyebrow-sm { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 1rem; }
 
-    .section { padding: 5rem 4rem; max-width: 800px; }
-    .section h2 { font-family: 'DM Sans', sans-serif; font-size: clamp(22px, 2.5vw, 30px); font-weight: 500; color: var(--fir); line-height: 1.25; margin-bottom: 1.25rem; letter-spacing: -0.01em; }
-    .section p { font-size: 16px; color: var(--body); line-height: 1.85; margin-bottom: 1.25rem; }
-    .section p:last-child { margin-bottom: 0; }
+    .eyebrow-sm {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 1rem;
+    }
 
-    .section.alt { background: var(--offwhite); max-width: none; }
-    .section.alt .section-inner { max-width: 800px; }
-
-    /* ── CHECKLIST ── */
-    .includes-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
-    .includes-list li {
-      display: flex; align-items: flex-start; gap: 14px; padding: 0.85rem 0;
-      border-bottom: 0.5px solid var(--dim); font-size: 15px; font-weight: 400; color: var(--fir); line-height: 1.5;
-    }
-    .includes-list li:first-child { border-top: 0.5px solid var(--dim); }
-    .includes-list li svg { flex-shrink: 0; margin-top: 2px; color: var(--copper); }
-
-    /* ── WHO NEEDS THIS ── */
-    .need-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin: 1.5rem 0; }
-    .need-list li {
-      display: flex; align-items: center; gap: 14px; padding: 0.85rem 0;
-      border-bottom: 0.5px solid var(--dim); font-size: 15px; color: var(--fir);
-    }
-    .need-list li:first-child { border-top: 0.5px solid var(--dim); }
-    .need-dot { width: 5px; height: 5px; background: var(--copper); flex-shrink: 0; }
-
-    /* ── CTA ── */
-    .cta-section {
-      background: var(--fir); padding: 5rem 4rem; display: grid;
-      grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-    }
-    .cta-left h2 {
-      font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 600;
-      color: var(--white); line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.01em;
-    }
-    .cta-left p { font-size: 15px; color: var(--teal-light); line-height: 1.75; }
-    .cta-right { border-left: 0.5px solid rgba(92,143,143,0.25); padding-left: 4rem; display: flex; flex-direction: column; gap: 1.75rem; }
-    .cta-contact-row { display: flex; align-items: center; gap: 16px; }
-    .cta-icon {
-      width: 44px; height: 44px; border: 0.5px solid rgba(192,132,90,0.4);
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--copper);
-    }
-    .clabel { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 3px; }
-    .cval { font-size: 16px; font-weight: 500; color: var(--white); }
-    .cta-btn {
-      display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-      background: var(--copper); color: var(--fir); padding: 14px 28px; margin-top: 0.25rem; align-self: flex-start;
+    .btn-primary {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--copper);
+      color: var(--fir);
+      padding: 14px 28px;
+      display: inline-block;
       transition: background 0.15s;
     }
-    .cta-btn:hover { background: #d4956a; }
 
-    /* ── CITIES ── */
-    .cities { padding: 2.5rem 4rem; border-top: 0.5px solid var(--dim); background: var(--white); }
-    .cities p { font-size: 12px; color: rgba(60,90,90,0.38); line-height: 1.8; max-width: 820px; }
+    .btn-primary:hover { background: #d4956a; }
+
+    .btn-ghost {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 0.5px solid var(--teal);
+      color: var(--teal);
+      padding: 14px 28px;
+      display: inline-block;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-ghost:hover { background: var(--teal); color: var(--white); }
+
+    /* ── SERVICE BLOCKS ── */
+    .service-block {
+      padding: 6rem 4rem;
+    }
+
+
+    .service-inner {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .service-left {
+      position: sticky;
+      top: 6rem;
+    }
+
+    .service-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 72px;
+      font-weight: 600;
+      color: rgba(192, 132, 90, 0.15);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .service-left h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .service-price {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--copper);
+      border: 0.5px solid rgba(192, 132, 90, 0.4);
+      padding: 6px 14px;
+      letter-spacing: 0.04em;
+    }
+
+    .service-right p {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--body);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-right p:last-of-type { margin-bottom: 2rem; }
+
+    .includes-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 1rem;
+    }
+
+    .includes-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .includes-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 0.85rem 0;
+      border-bottom: 0.5px solid var(--dim);
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--fir);
+      line-height: 1.5;
+    }
+
+    .includes-list li:first-child { border-top: 0.5px solid var(--dim); }
+
+    .includes-list li svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--copper);
+    }
+
+    /* ── JUMP NAV + CATEGORY HEADERS ── */
+    .jump-nav { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+    .jump-nav a { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid rgba(122,173,173,0.45); color: var(--teal-light); padding: 10px 20px; transition: background 0.15s, color 0.15s, border-color 0.15s; }
+    .jump-nav a:hover { background: var(--copper); border-color: var(--copper); color: var(--fir); }
+    .cat-head { background: var(--fir); padding: 4rem 4rem 3.5rem; border-bottom: 3px solid var(--copper); scroll-margin-top: 4.5rem; }
+    .cat-head h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 46px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.01em; max-width: 700px; }
+    .cat-head p { font-size: 16px; color: var(--teal-light); max-width: 680px; line-height: 1.75; }
+
+    /* ── DETAIL BAND (steps, lists, callouts) ── */
+    .detail-band { background: var(--offwhite); padding: 5rem 4rem; border-top: 0.5px solid var(--dim); }
+    .detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+    .panel h3 { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 1.25rem; padding-bottom: 0.9rem; border-bottom: 2px solid var(--copper); }
+    .panel p { font-size: 15px; color: var(--body); line-height: 1.8; margin-bottom: 1rem; }
+    .panel a { color: var(--copper); border-bottom: 0.5px solid var(--copper); }
+    .steps { list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 1.1rem; }
+    .steps li { counter-increment: step; position: relative; padding-left: 2.4rem; font-size: 15px; line-height: 1.7; color: var(--body); }
+    .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--copper); line-height: 1.2; }
+    .steps strong, .dot-list strong { font-weight: 500; color: var(--fir); }
+    .dot-list { list-style: none; display: flex; flex-direction: column; }
+    .dot-list li { position: relative; padding: 0.7rem 0 0.7rem 17px; border-bottom: 0.5px solid var(--dim); font-size: 15px; line-height: 1.6; color: var(--body); }
+    .dot-list li:first-child { border-top: 0.5px solid var(--dim); }
+    .dot-list li::before { content: ''; position: absolute; left: 0; top: 1.25rem; width: 5px; height: 5px; background: var(--copper); }
+    .dot-list a { color: var(--copper); border-bottom: 0.5px solid var(--copper); }
+    .band-note { margin-top: 2.5rem; font-size: 13px; color: var(--muted); }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 0.5px solid var(--dim); }
+    .faq-item:first-child { border-top: 0.5px solid var(--dim); }
+    .faq-item summary { list-style: none; cursor: pointer; padding: 1.1rem 2rem 1.1rem 0; font-size: 16px; font-weight: 500; color: var(--fir); line-height: 1.45; position: relative; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; position: absolute; right: 4px; top: 0.9rem; font-size: 22px; font-weight: 400; color: var(--copper); }
+    .faq-item[open] summary::after { content: '\2212'; }
+    .faq-item summary:hover { color: var(--copper); }
+    .faq-answer p { font-size: 15px; color: var(--body); line-height: 1.8; margin-bottom: 1.1rem; }
+    .faq-answer a { color: var(--copper); border-bottom: 0.5px solid var(--copper); }
+    .service-block, .detail-band, .cat-head { scroll-margin-top: 4.5rem; }
+
+    /* ── SCOPE SECTION ── */
+    .scope-section {
+      padding: 5rem 4rem;
+      background: var(--offwhite);
+      border-top: 0.5px solid var(--dim);
+      border-bottom: 0.5px solid var(--dim);
+    }
+
+    .scope-inner {
+      max-width: 640px;
+    }
+
+    .scope-section h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(22px, 2.5vw, 28px);
+      font-weight: 500;
+      color: var(--fir);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .scope-section > .scope-inner > p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .scope-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 1.75rem;
+    }
+
+    .scope-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 0.75rem 0;
+      border-bottom: 0.5px solid var(--dim);
+      font-size: 14px;
+      color: var(--body);
+      line-height: 1.6;
+    }
+
+    .scope-list li:first-child { border-top: 0.5px solid var(--dim); }
+
+    .scope-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--copper);
+      flex-shrink: 0;
+      margin-top: 9px;
+    }
+
+    .scope-list li em {
+      color: var(--muted);
+      font-style: normal;
+      font-size: 13px;
+    }
+
+    .scope-note {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    /* ── QUOTE BUILDER PLACEHOLDER ── */
+    .quote-placeholder {
+      padding: 6rem 4rem;
+      background: var(--fir);
+      text-align: center;
+    }
+
+    .quote-placeholder-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .quote-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: rgba(192, 132, 90, 0.15);
+      color: var(--copper);
+      border: 0.5px solid rgba(192, 132, 90, 0.3);
+      padding: 5px 14px;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-placeholder h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .quote-placeholder p {
+      font-size: 15px;
+      color: var(--teal-light);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .quote-placeholder-box {
+      border: 0.5px dashed rgba(92, 143, 143, 0.35);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .quote-placeholder-box p {
+      font-size: 13px;
+      color: rgba(122, 173, 173, 0.5);
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--white);
+      padding: 5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      border-top: 0.5px solid var(--dim);
+    }
+
+    .cta-left h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 600;
+      color: var(--fir);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .cta-left p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .cta-right {
+      border-left: 0.5px solid var(--dim);
+      padding-left: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .cta-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cta-icon {
+      width: 44px;
+      height: 44px;
+      border: 0.5px solid rgba(192, 132, 90, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--copper);
+    }
+
+    .clabel {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 3px;
+    }
+
+    .cval {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--fir);
+    }
+
+    /* ── CITIES (SEO) ── */
+    .cities {
+      padding: 2.5rem 4rem;
+      border-top: 0.5px solid var(--dim);
+      background: var(--white);
+    }
+
+    .cities p {
+      font-size: 12px;
+      color: rgba(60, 90, 90, 0.38);
+      line-height: 1.8;
+      max-width: 820px;
+    }
 
     /* ── FOOTER ── */
-    footer { padding: 2rem 4rem; background: var(--fir); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; }
+    footer {
+      padding: 2rem 4rem;
+      background: var(--fir);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+
     .footer-copy { font-size: 12px; color: var(--teal-light); }
     .footer-links { display: flex; gap: 2rem; font-size: 12px; color: var(--teal-light); }
     .footer-links a:hover { color: var(--white); }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 1.25rem 1.5rem; }
       .nav-links { display: none; }
       .page-header { padding: 3rem 1.5rem; }
-      .section { padding: 3rem 1.5rem; }
+      .service-block { padding: 4rem 1.5rem; }
+      .cat-head { padding: 3rem 1.5rem 2.5rem; }
+      .detail-band { padding: 3.5rem 1.5rem; }
+      .detail-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .service-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .service-left { position: static; }
+      .service-num { font-size: 52px; }
       hr { margin: 0 1.5rem; }
+      .quote-placeholder { padding: 4rem 1.5rem; }
       .cta-section { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
-      .cta-right { border-left: none; padding-left: 0; border-top: 0.5px solid rgba(92,143,143,0.25); padding-top: 2.5rem; }
+      .cta-right { border-left: none; padding-left: 0; border-top: 0.5px solid var(--dim); padding-top: 2.5rem; }
       .cities { padding: 2rem 1.5rem; }
       footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
     }
+  
+    /* ── BACKFLOW PAGE ── */
+    .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 2rem; }
+    .page-header .btn-ghost { border-color: rgba(245, 242, 237, 0.45); color: var(--white); }
+    .page-header .btn-ghost:hover { background: var(--white); color: var(--fir); border-color: var(--white); }
+    .cta-section .btn-primary { align-self: flex-start; }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often do I need a backflow test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once a year, and again after any repair."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who has to schedule it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You do. The water provider doesn't do the testing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you send the report to the city?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In Portland, testers must submit reports within 10 business days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the test shut off my water?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Briefly, for the part of the building the assembly protects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you cover Beaverton and Hillsboro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each water provider has its own rules, so we follow the one that serves you."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WD4JQ7LJ6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3WD4JQ7LJ6');
+  </script>
 </head>
 <body>
 
-  <!-- FLAG: this page is intentionally not linked from nav or sitemap.xml yet.
-       Add it to the nav (as a dropdown or standalone item) and to sitemap.xml
-       only once Backflow Assembly Tester certification is complete. -->
-
+  <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">
       <svg width="34" height="27" viewBox="0 0 40 32" fill="none" aria-hidden="true">
@@ -146,60 +633,120 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="learning-center.html">Learning Center</a>
-      <a href="contact.html">Contact</a>
+     <a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="learning-center.html">Learning Center</a>
+<a href="contact.html">Contact</a>
     </div>
     <a href="contact.html" class="nav-cta">Schedule Inspection</a>
   </nav>
 
+  <!-- PAGE HEADER -->
   <div class="page-header">
-    <div class="eyebrow">Backflow prevention testing</div>
-    <h1>Your fire sprinkler system needs more than a suppression check.</h1>
-    <p>Oregon law and Portland City Code require annual backflow testing on any property with a fire sprinkler system, irrigation system, or other cross-connection risk. If you're already having your suppression system inspected, your backflow assembly is due the same year.</p>
+    <div class="eyebrow">Backflow testing</div>
+    <h1>Backflow assembly testing for the Portland metro.</h1>
+    <p>Your water provider requires your backflow assembly to be tested every year. We test it, send the report, and tell you plainly if something needs attention.</p>
+    <div class="btn-row">
+      <a href="contact.html" class="btn-primary">Schedule a test</a>
+      <a href="services.html" class="btn-ghost">See all services</a>
+    </div>
   </div>
 
-  <hr>
-
-  <section class="section">
-    <div class="eyebrow-sm">Why it matters</div>
-    <h2>Protecting the water supply, not just the building.</h2>
-    <p>Backflow prevention assemblies protect Portland's drinking water supply from contamination. If water pressure drops or reverses, a cross-connection can pull contaminated water back into the clean supply, which is exactly what these devices are built to stop.</p>
-    <p>State law requires annual testing by a certified tester, and Portland Water Bureau tracks every property with a device on file.</p>
-    <p>Miss your test, miss your paperwork, and the consequences are real: fines, or in some cases a water shutoff, even if you actually paid for the test but the report never got filed.</p>
-  </section>
-
-  <section class="section alt">
-    <div class="section-inner">
-      <div class="eyebrow-sm">What's included</div>
-      <h2>A complete, documented test.</h2>
-      <ul class="includes-list">
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Inspection of the backflow prevention assembly</li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Calibrated gauge testing to verify proper function</li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Documentation of pass or fail results</li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Report submission to the appropriate water bureau</li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Repair referral if your assembly fails and needs service</li>
-      </ul>
+  <!-- WHY IT MATTERS -->
+  <section class="service-block">
+    <div class="service-inner">
+      <div class="service-left">
+        <div class="eyebrow-sm">Why it matters</div>
+        <h2>Protecting the water supply.</h2>
+      </div>
+      <div class="service-right">
+        <p>A backflow assembly keeps dirty water from flowing backward into the public drinking water supply. If water pressure drops, a cross-connection can pull contaminated water back into the clean supply. These devices are built to stop that.</p>
+        <p>Water providers require them wherever your plumbing could create that risk. Any property with a fire sprinkler system must have its assembly tested every year. The test has to be done by a state-certified tester.</p>
+        <p>Scheduling the test is your job as the owner. The water provider doesn't do it for you.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="eyebrow-sm">Who needs this</div>
-    <h2>If any of these apply, testing is required annually.</h2>
-    <ul class="need-list">
-      <li><div class="need-dot"></div>A fire sprinkler system</li>
-      <li><div class="need-dot"></div>An irrigation system</li>
-      <li><div class="need-dot"></div>Any other cross-connection risk as defined by your local water bureau</li>
-    </ul>
-    <p>If we're already inspecting your kitchen suppression system and your building also has a fire sprinkler line, this is worth doing on the same visit.</p>
+  <hr>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="service-block">
+    <div class="service-inner">
+      <div class="service-left">
+        <div class="eyebrow-sm">Annual testing</div>
+        <h2>What's included</h2>
+      </div>
+      <div class="service-right">
+        <ul class="includes-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Test of each backflow assembly on your property</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Check of shutoff valves, test cocks, and visible condition</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Written test report on the form your water provider requires</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Report sent to your water provider within their deadline</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Retest after repairs</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Referral to a repair provider if an assembly fails</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Reminder when your next annual test is due</li>
+        </ul>
+      </div>
+    </div>
   </section>
+
+  <section class="detail-band">
+    <div class="detail-grid">
+        <div class="panel">
+          <h3>How testing goes</h3>
+          <ol class="steps"><li><strong>Find your assemblies.</strong> We locate each one and note the make, model, and size.</li><li><strong>Test.</strong> We test each assembly with calibrated gauges. Water to that part of your building is off for a short time.</li><li><strong>Report.</strong> You get a copy and we send one to your water provider.</li><li><strong>Retest if needed.</strong> If an assembly fails, we tell you what failed. Once it's repaired, we retest and file the passing report.</li></ol>
+        </div>
+        <div class="panel">
+          <h3>Who needs it</h3>
+          <ul class="dot-list"><li>Fire sprinkler lines</li><li>Irrigation systems</li><li>Boilers</li><li>Water reuse systems</li><li>Anything else your water provider flags</li><li>Not sure if you have one? Look for a metal assembly near your water line with test valves on it, or ask us and we'll help you find out.</li></ul>
+        </div>
+        <div class="panel">
+          <h3>If an assembly fails</h3>
+          <p>A failed test doesn't mean you're in trouble. It means something inside needs attention.</p><p>We don't do repairs, but we can refer you to someone who does.</p><p>Don't wait. In Portland, an owner whose assembly fails and isn't fixed promptly can be held responsible for any illness or injury that results.</p>
+        </div>
+    </div>
+  </section>
+
+  <section class="service-block faq-block">
+    <div class="service-inner">
+      <div class="service-left">
+        <div class="eyebrow-sm">Common questions</div>
+        <h2>Backflow FAQ</h2>
+      </div>
+      <div class="service-right">
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How often do I need a backflow test?</summary>
+            <div class="faq-answer"><p>Once a year, and again after any repair.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Who has to schedule it?</summary>
+            <div class="faq-answer"><p>You do. The water provider doesn't do the testing.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you send the report to the city?</summary>
+            <div class="faq-answer"><p>Yes. In Portland, testers must submit reports within 10 business days.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Does the test shut off my water?</summary>
+            <div class="faq-answer"><p>Briefly, for the part of the building the assembly protects.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you cover Beaverton and Hillsboro?</summary>
+            <div class="faq-answer"><p>Yes. Each water provider has its own rules, so we follow the one that serves you.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLAG: add photo of an actual backflow assembly once you have one -->
 
   <!-- CTA -->
   <section class="cta-section">
     <div class="cta-left">
       <h2>Ready to schedule?</h2>
-      <p>Call or email to get on the schedule. Contact us for a quote.</p>
+      <p>Call or email to get on the schedule. Already booked with us for hood or extinguisher service? Ask us to add backflow to the same visit.</p>
     </div>
     <div class="cta-right">
       <div class="cta-contact-row">
@@ -225,16 +772,16 @@
           <div class="cval">hello@timberlinefiresystems.com</div>
         </div>
       </div>
-      <a href="contact.html" class="cta-btn">Get a quote</a>
+      <a href="contact.html" class="btn-primary">Get a quote</a>
     </div>
   </section>
 
-  <!-- FLAG: add photo of an actual backflow assembly device once certified and equipped -->
-
+  <!-- CITIES (SEO) -->
   <div class="cities">
-    <p>Timberline Fire Systems provides backflow prevention testing, portable fire extinguisher servicing, and kitchen hood suppression inspections throughout the Portland metro area including Portland, Beaverton, Hillsboro, Gresham, Lake Oswego, Tigard, Tualatin, Sherwood, Wilsonville, Oregon City, Happy Valley, Canby, Clackamas, Milwaukie, West Linn, Troutdale, Fairview, Wood Village, Cornelius, Forest Grove, and surrounding communities in Multnomah, Washington, and Clackamas counties.</p>
+    <p>Timberline Fire Systems provides kitchen hood suppression inspections, portable fire extinguisher service, and backflow testing throughout the Portland metro area including Portland, Beaverton, Hillsboro, Gresham, Lake Oswego, Tigard, Tualatin, Sherwood, Wilsonville, Oregon City, Happy Valley, Canby, Clackamas, Milwaukie, West Linn, Troutdale, Fairview, Wood Village, Cornelius, Forest Grove, and surrounding communities in Multnomah, Washington, and Clackamas counties.</p>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-name">TIMBERLINE FIRE SYSTEMS</div>
     <div class="footer-copy">© 2026 Timberline Fire Systems LLC. Beaverton, Oregon.</div>
